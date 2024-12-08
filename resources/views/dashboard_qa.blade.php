@@ -13,7 +13,5 @@ if ($_SESSION['role'] !== 'QA') {
 </head>
 <body>
     <h1>Welcome to the QA Dashboard</h1>
-    <p>Hello, <?php echo $_SESSION['username']; ?>!</p>
-    <a href="logout.php">Logout</a>
 </body>
 </html>

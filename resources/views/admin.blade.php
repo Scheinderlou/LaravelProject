@@ -4,15 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 </head>
 
 <body>
-    <h1>This is Login Page</h1>
-    <span>bogo lagahid</span>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form action="authenticate.php" method="POST">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
 </body>
-<p> blablablalbalbla</p>
-<h1>Cyvielle bogo</h1>
 
 </html>
