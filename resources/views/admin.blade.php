@@ -13,12 +13,12 @@
         <h1>Login</h1>
         <form action="authenticate.php" method="POST">
             <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" name="username" id="username" required>
+                <label for="username"></label>
+                <input type="text" name="username" id="username" placeholder="Username" required>
             </div>
             <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" required>
+                <label for="password"></label>
+                <input type="password" name="password" id="password" placeholder="Password" required>
             </div>
             <button type="submit">Login</button>
         </form>
