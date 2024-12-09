@@ -8,3 +8,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/admin', [PagesController::class, 'admin']);
 Route::get('/dashboard_qa', [PagesController::class, 'dashboard_qa']);
 Route::get('/dashboard_hr', [PagesController::class, 'dashboard_hr']);
+
+//test purposes for tailwind
+Route::get('/test', function () {
+    return view('test');
+});

@@ -1,18 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
+    {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
+    @vite('resources/css/app.css')
+
 </head>
 
 <body>
-    <h1>This is Login Page</h1>
-    <span>bogo lagahid</span>
+    <h1 class="text-3xl font-bold underline bg-blue-500">
+        Bogo Lagahid
+    </h1>
 </body>
-<p> blablablalbalbla</p>
-<h1>Cyvielle bogo</h1>
 
 </html>
