@@ -4,99 +4,104 @@
 
 @section('content')
 
-    <body class="bg-[#D9D9D9]">
-        <div class=" mx-auto p-6">
-            <h2 class="text-2xl font-bold text-gray-700">HR Payroll</h2>
+    <body class="bg-[#008080]">
+        <div class="mx-auto p-2 flex flex-col mb-2">
+            <div class="flex justify-between items-center">
+                <h1 class="text-4xl font-bold">Payroll System</h1>
+                <a href="{{ route('payroll_view') }}">
+                    <button class="bg-[#001F3F] text-white px-6 py-3 rounded hover:bg-blue-600 transition">
+                        Back
+                    </button>
+                </a>
+            </div>
+        </div>
 
-            <!-- Filters -->
-            <div class="flex justify-end mb-6">
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                    <input type="text"
-                        class="text-sm py-2 px-4 border border-gray-300 rounded focus:ring-2 focus:outline-none"
-                        placeholder="Search bar">
-                    <input type="date"
-                        class="text-sm py-2 px-4 border border-gray-300 rounded focus:ring-2 focus:outline-none">
-                    <select class="text-sm py-2 px-4 border border-gray-300 rounded focus:ring-2 focus:outline-none">
-                        <option value="">Filter by Status</option>
-                        <option value="Paid">Paid</option>
-                        <option value="Pending">Pending</option>
-                        <option value="Overdue">Overdue</option>
+        <div class="flex justify-end text-center mb-6">
+            <div class="p-5 bg-[#008080] rounded-lg">
+                <h2 class="font-bold text-md mb-2">Cyvielle Lagahid</h2>
+                <div class="flex flex-col items-center">
+                    <!-- Replace placeholder with an image -->
+                    <img src="{{ asset('img/test.jpg') }}" alt="Profile Picture"
+                        class="w-28 h-28 object-cover rounded-lg mb-3 border-none">
+                    <div class="flex space-x-2">
+                        <button class="px-2 py-1 bg-[#001F3F] text-white rounded text-sm">Import</button>
+                        <button class="px-2 py-1 bg-[#001F3F] text-white rounded text-sm">Save</button>
+                        <button class="px-2 py-1 bg-[#001F3F] text-white rounded text-sm">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <!-- Personal Data -->
+            <div class="p-6 bg-[#008080] rounded-lg">
+                <h2 class="font-semibold text-lg mb-4">Personal Data</h2>
+                <div class="grid grid-cols-2 gap-4 ">
+                    <input placeholder="Staff ID" class="p-2 border rounded bg-[#D1D5DB] " />
+                    <input placeholder="First Name" class="p-2 border rounded bg-[#D1D5DB]" />
+                    <input placeholder="Last Name" class="p-2 border rounded bg-[#D1D5DB]" />
+                    <select class="p-2 border rounded bg-[#D1D5DB] text-gray-400">
+                        <option>Sex</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                    <input placeholder="Department" class="p-2 border rounded bg-[#D1D5DB]" />
+                    <select class="p-2 border rounded bg-[#D1D5DB] text-gray-400">
+                        <option>Scale</option>
+                    </select>
+                    <select class="p-2 border rounded bg-[#D1D5DB] text-gray-400">
+                        <option>Status</option>
+                        <option>Paid</option>
+                        <option>Unpaid</option>
                     </select>
                 </div>
             </div>
 
-            <div class="overflow-x-auto">
-                <table class="min-w-full text-left rounded-[16px] bg-[#008080]">
-                    <thead>
-                        <tr>
-                            <th class="px-8 py-4 border-0 text-lg font-bold">Payroll ID</th>
-                            <th class="px-8 py-4 border-0 text-lg font-bold">Employee Name</th>
-                            <th class="px-8 py-4 border-0 text-lg font-bold">Department</th>
-                            <th class="px-8 py-4 border-0 text-lg font-bold">Deductions</th>
-                            <th class="px-8 py-4 border-0 text-lg font-bold">Bonuses</th>
-                            <th class="px-8 py-4 border-0 text-lg font-bold">Net Pay</th>
-                            <th class="px-8 py-4 border-0 text-lg font-bold">Payment Date</th>
-                            <th class="px-8 py-4 border-0 text-lg font-bold">Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="p-4 border-none">1</td>
-                            <td class="p-4 border-none">Javier Jezekiel</td>
-                            <td class="p-4 border-none">Quality Assurance</td>
-                            <td class="p-4 border-none">$200</td>
-                            <td class="p-4 border-none">$500</td>
-                            <td class="p-4 border-none">$2,300</td>
-                            <td class="p-4 border-none">2024-08-01</td>
-                            <td class="p-4 border-none">
-                                <span class="inline-block px-4 py-2 text-sm font-bold text-green-800 bg-green-100 rounded">
-                                    Paid
-                                </span>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <td class="p-4 border-none">2</td>
-                            <td class="p-4 border-none">Jhon Mark Genela</td>
-                            <td class="p-4 border-none">Quality Assurance</td>
-                            <td class="p-4 border-none">$200</td>
-                            <td class="p-4 border-none">$500</td>
-                            <td class="p-4 border-none">$2,300</td>
-                            <td class="p-4 border-none">2024-08-01</td>
-                            <td class="p-4 border-none">
-                                <span class="inline-block px-4 py-2 text-sm font-bold text-green-800 bg-green-100 rounded">
-                                    Paid
-                                </span>
-                            </td>
-                        </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <td class="p-4 border-none">3</td>
-                            <td class="p-4 border-none">Jomarie Vicada</td>
-                            <td class="p-4 border-none">Quality Assurance</td>
-                            <td class="p-4 border-none">$200</td>
-                            <td class="p-4 border-none">$500</td>
-                            <td class="p-4 border-none">$2,300</td>
-                            <td class="p-4 border-none">2024-08-01</td>
-                            <td class="p-4 border-none">
-                                <span class="inline-block px-4 py-2 text-sm font-bold text-green-800 bg-green-100 rounded">
-                                    Paid
-                                </span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <!-- Export Button -->
-                <div class="mt-6 flex justify-end">
-                    <button class="bg-[#001F3F] text-white px-6 py-3 rounded hover:bg-blue-600 transition">
-                        Export Payroll Report
-                    </button>
+            <div class="p-6 bg-[#008080] rounded-lg">
+                <h2 class="font-semibold text-lg mb-4">Bank Detail</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <select class="p-2 border rounded bg-[#D1D5DB] text-gray-400">
+                        <option>Month</option>
+                    </select>
+                    <select class="p-2 border rounded bg-[#D1D5DB] text-gray-400">
+                        <option>Year</option>
+                    </select>
+                    <input placeholder="Bank Name" class="p-2 border rounded bg-[#D1D5DB]" />
+                    <input placeholder="Account Number" class="p-2 border rounded bg-[#D1D5DB]" />
+                    <input placeholder="Account Name" class="p-2 border rounded bg-[#D1D5DB]" />
+                    <input placeholder="Phone Number" class="p-2 border rounded bg-[#D1D5DB]" />
                 </div>
             </div>
         </div>
-    </body>
 
+        <div class="mt-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="p-6 bg-[#008080] rounded-lg">
+                <h2 class="font-semibold text-lg mb-4">Monthly Entries</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <input placeholder="Basic Salary" class="p-2 border rounded bg-[#D1D5DB]" />
+                    <input placeholder="Housing Allowance" class="p-2 border rounded bg-[#D1D5DB]" />
+                    <input placeholder="Transport Allowance" class="p-2 border rounded bg-[#D1D5DB]" />
+                    <select class="p-2 border rounded bg-[#D1D5DB] text-gray-400">
+                        <option>Over-time Stipend</option>
+                    </select>
+                </div>
+            </div>
+            <div class="p-6 bg-[#008080] rounded-lg">
+                <h2 class="font-semibold text-lg mb-4">Deduction</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <input placeholder="Salary Advance" class="p-2 border rounded bg-[#D1D5DB]" />
+                    <input placeholder="Contributory Pension" class="p-2 border rounded bg-[#D1D5DB]" />
+                    <input placeholder="Tax" class="p-2 border rounded bg-[#D1D5DB]" />
+                    <input placeholder="National Housing Fund" class="p-2 border rounded bg-[#D1D5DB]" />
+                    <input placeholder="Total Deduction" class="p-2 border rounded bg-[#D1D5DB]" />
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-end space-x-2 mt-4">
+            <button class="px-4 py-2 bg-[#001F3F] text-white rounded">Submit</button>
+
+        </div>
+        </div>
+    </body>
 @endsection

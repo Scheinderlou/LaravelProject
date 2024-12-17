@@ -14,6 +14,10 @@ class PagesController extends Controller
     {
         return view('pages.dashboard_qa');
     }
+    public function employees_hr()
+    {
+        return view('human_resources.employees_hr');
+    }
     public function home()
     {
         return view('human_resources.home');
@@ -21,5 +25,9 @@ class PagesController extends Controller
     public function payroll_hr()
     {
         return view('human_resources.payroll_hr');
+    }
+    public function payroll_view()
+    {
+        return view('human_resources.payroll_view');
     }
 }
