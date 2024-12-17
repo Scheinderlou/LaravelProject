@@ -10,7 +10,9 @@ Route::get('/welcome', function () {
 //Added controller
 Route::get('/admin', [PagesController::class, 'admin']);
 Route::get('/dashboard_qa', [PagesController::class, 'dashboard_qa']);
-Route::get('/dashboard_hr', [PagesController::class, 'dashboard_hr']);
+Route::get('/home', [PagesController::class, 'home']);
+Route::get('/payroll_hr', [PagesController::class, 'payroll_hr']);
+
 
 //test purposes for tailwind
 Route::get('/test', function () {
