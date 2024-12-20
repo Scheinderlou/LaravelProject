@@ -4,7 +4,8 @@
 
 @section('content')
 
-    <body class="bg-[#008080]">
+
+    <div class="container mx-auto p-6">
         <div class="mx-auto p-2 flex flex-col mb-2">
             <div class="flex justify-between items-center">
                 <h1 class="text-4xl font-bold">Payroll System</h1>
@@ -20,7 +21,6 @@
             <div class="p-5 bg-[#008080] rounded-lg">
                 <h2 class="font-bold text-md mb-2">Cyvielle Lagahid</h2>
                 <div class="flex flex-col items-center">
-                    <!-- Replace placeholder with an image -->
                     <img src="{{ asset('img/test.jpg') }}" alt="Profile Picture"
                         class="w-28 h-28 object-cover rounded-lg mb-3 border-none">
                     <div class="flex space-x-2">
@@ -102,6 +102,7 @@
             <button class="px-4 py-2 bg-[#001F3F] text-white rounded">Submit</button>
 
         </div>
-        </div>
-    </body>
+    </div>
+
+
 @endsection

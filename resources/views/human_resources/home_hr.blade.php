@@ -4,7 +4,8 @@
 
 @section('content')
     <!-- Dashboard Content -->
-    <div class="container mx-auto p-8 bg-[#D9D9D9] rounded-[16px]">
+    <div class="container mx-auto p-6">
+        <!-- Cards Section -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div class="bg-[#008080] shadow p-4 rounded-[16px]">
                 <h3 class="text-lg font-bold">Total Employees</h3>
@@ -81,5 +82,7 @@
             </div>
         </div>
     </div>
+
+
 
 @endsection

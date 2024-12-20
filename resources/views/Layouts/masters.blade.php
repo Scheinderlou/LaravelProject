@@ -14,7 +14,7 @@
                     HR
                 </a>
                 <nav class="space-y-4">
-                    <a href="{{ route('employees_hr') }}"
+                    <a href="{{ route('employees') }}"
                         class="block py-2 px-4 rounded-[16px] hover:bg-blue-600">Employees</a>
                     <a href="{{ route('payroll_view') }}"
                         class="block py-2 px-4 rounded-[16px] hover:bg-blue-600">Payroll</a>

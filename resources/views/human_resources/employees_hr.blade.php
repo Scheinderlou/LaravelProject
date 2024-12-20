@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div class="container mx-auto p-8 ">
+    <div class="container mx-auto p-6 ">
         <table class="min-w-full text-left text-md rounded-[14px] bg-[#008080]">
             <thead>
                 <tr>
