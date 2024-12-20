@@ -1,6 +1,6 @@
 @extends('layouts.masters')
 
-@section('title', 'Edit Payroll Entry')
+@section('title', 'Edit - Page')
 
 @section('content')
 
