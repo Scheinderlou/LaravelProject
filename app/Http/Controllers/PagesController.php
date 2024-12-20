@@ -14,20 +14,24 @@ class PagesController extends Controller
     {
         return view('pages.dashboard_qa');
     }
-    public function employees_hr()
+    public function employees_page()
     {
-        return view('human_resources.employees_hr');
+        return view('human_resources.employees_page');
     }
-    public function home_hr()
+    public function home_page()
     {
-        return view('human_resources.home_hr');
+        return view('human_resources.home_page');
     }
-    public function payroll_hr()
+    public function payroll_page()
     {
-        return view('human_resources.payroll_hr');
+        return view('human_resources.payroll_page');
     }
-    public function payroll_view()
+    public function view_page()
     {
-        return view('human_resources.payroll_view');
+        return view('human_resources.view_page');
+    }
+    public function edit_page()
+    {
+        return view('human_resources.edit_page');
     }
 }

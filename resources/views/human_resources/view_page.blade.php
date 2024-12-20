@@ -8,14 +8,12 @@
         <h2 class="text-3xl font-bold text-gray-700 mb-3">HR Payroll</h2>
         <div class="flex justify-between items-center mb-6">
             <div class="flex gap-2">
-                <a href="{{ route('payroll_hr') }}">
+                <a href="{{ route('payroll_page') }}">
                     <button class="bg-[#001F3F] text-white px-4 py-2 text-sm rounded-md hover:bg-blue-600 transition">
                         Create payroll
                     </button>
                 </a>
-                <button class="bg-[#001F3F] text-white px-4 py-2 text-sm rounded-md hover:bg-blue-600 transition">
-                    Edit
-                </button>
+
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
@@ -108,6 +106,12 @@
                                 <span class="inline-block px-2 py-1 text-xs font-bold text-green-200 bg-red-800 rounded">
                                     Delete
                                 </span>
+                                <a href="{{ route('edit_page') }}">
+                                    <button
+                                        class="inline-block px-2 py-1 text-xs font-bold text-green-200 bg-[#EDA841] rounded">
+                                        Edit
+                                    </button>
+                                </a>
                             </td>
                         </tr>
                     </tbody>

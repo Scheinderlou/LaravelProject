@@ -9,7 +9,7 @@
         <div class="mx-auto p-2 flex flex-col mb-2">
             <div class="flex justify-between items-center">
                 <h1 class="text-3xl font-bold text-gray-700">Payroll System</h1>
-                <a href="{{ route('payroll_view') }}">
+                <a href="{{ route('view_page') }}">
                     <button class="bg-[#001F3F] text-white px-6 py-3 rounded hover:bg-blue-600 transition">
                         Back
                     </button>

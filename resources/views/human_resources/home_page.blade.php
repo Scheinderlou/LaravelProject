@@ -51,7 +51,7 @@
                             <td class="px-6 py-3">IT</td>
                             <td class="p-4">
                                 <span class="inline-block px-3 py-2 text-xs font-bold text-green-100 bg-green-700 rounded">
-                                    Paid
+                                    Active
                                 </span>
                             </td>
                         </tr>
@@ -62,7 +62,7 @@
                             <td class="px-6 py-3">HR</td>
                             <td class="p-4">
                                 <span class="inline-block px-3 py-2 text-xs font-bold text-green-100 bg-green-700 rounded">
-                                    Paid
+                                    Active
                                 </span>
                             </td>
                         </tr>
