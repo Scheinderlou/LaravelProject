@@ -10,7 +10,7 @@
 
 </head>
 
-<body class="flex items-center justify-center h-screen bg-green-500 m-0">
+<body class=" bg-[#D9D9D9] flex items-center justify-center h-screen m-0">
     <div class="bg-slate-700 p-6 rounded-lg shadow-lg w-80 text-center">
         <h1 class="text-2xl font-bold text-white mb-6">Login</h1>
         <form action="authenticate.php" method="POST" class="space-y-4">
