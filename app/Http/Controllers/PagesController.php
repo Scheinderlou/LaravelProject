@@ -34,8 +34,4 @@ class PagesController extends Controller
     {
         return view('human_resources.view_page');
     }
-    public function edit_page()
-    {
-        return view('human_resources.edit_page');
-    }
 }

@@ -13,8 +13,6 @@ Route::get('/home_page', [PagesController::class, 'home_page'])->name('home_page
 Route::get('/employees_page', action: [PagesController::class, 'employees_page'])->name('employees_page');
 Route::get('/payroll_page', [PagesController::class, 'payroll_page'])->name('payroll_page');
 Route::get('/view_page', [PagesController::class, 'view_page'])->name('view_page');
-Route::get('/edit_page', [PagesController::class, 'edit_page'])->name('edit_page');
-
 
 //test purposes for tailwind
 Route::get('/test', function () {
