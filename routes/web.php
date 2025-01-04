@@ -4,7 +4,6 @@ use App\Http\Controllers\AuthManager;
 use App\Http\Controllers\PagesController;
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthManager;
 
 //Added controller
 Route::get('/welcome', [PagesController::class, 'welcome']);
