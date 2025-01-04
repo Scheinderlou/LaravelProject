@@ -13,10 +13,10 @@
 <body class=" bg-[#D9D9D9] flex items-center justify-center h-screen m-0">
     <div class="bg-slate-700 p-6 rounded-lg shadow-lg w-80 text-center">
         <h1 class="text-2xl font-bold text-white mb-6">Login</h1>
-        <form action="authenticate.php" method="POST" class="space-y-4">
+        <form action="{{route('login.post')}}" method="POST" class="space-y-4">
             <div class="text-left">
                 <label for="username" class="block text-sm font-medium text-gray-400"></label>
-                <input type="text" name="username" id="username" placeholder="Username" required
+                <input type="text" name="email" id="username" placeholder="Email" required
                     class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring focus:ring-blue-300">
             </div>
             <div class="text-left">

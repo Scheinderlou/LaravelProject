@@ -1,9 +1,10 @@
 <?php
 
+use App\Http\Controllers\AuthManager;
 use App\Http\Controllers\PagesController;
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\AuthManager;
 
 //Added controller
 Route::get('/welcome', [PagesController::class, 'welcome']);
@@ -15,7 +16,13 @@ Route::get('/payroll_page', [PagesController::class, 'payroll_page'])->name('pay
 Route::get('/view_page', [PagesController::class, 'view_page'])->name('view_page');
 Route::get('/edit_page', [PagesController::class, 'edit_page'])->name('edit_page');
 
+Route::get('/', function() {
+    return view('welcome');
 
+})->name('home');
+Route::get('/login', [AuthManager::class, 'login'])->name('login');
+Route::post('/login', [AuthManager::class, 'loginPost'])->name('login.post');
+Route::get('/logout', [AuthManager::class, 'logout'])->name('logout');
 //test purposes for tailwind
 Route::get('/test', function () {
     return view('Pages.test');
