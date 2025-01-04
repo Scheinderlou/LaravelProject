@@ -130,6 +130,12 @@
                                 <span class="inline-block px-2 py-1 text-xs font-bold text-green-200 bg-red-800 rounded">
                                     Delete
                                 </span>
+                                <a href="{{ route('edit_page') }}">
+                                    <button
+                                        class="inline-block px-2 py-1 text-xs font-bold text-green-200 bg-[#EDA841] rounded">
+                                        Edit
+                                    </button>
+                                </a>
                             </td>
                         </tr>
                     </tbody>
@@ -147,6 +153,12 @@
                             <span class="inline-block px-2 py-1 text-xs font-bold text-green-200 bg-red-800 rounded">
                                 Delete
                             </span>
+                            <a href="{{ route('edit_page') }}">
+                                <button
+                                    class="inline-block px-2 py-1 text-xs font-bold text-green-200 bg-[#EDA841] rounded">
+                                    Edit
+                                </button>
+                            </a>
                         </td>
                     </tr>
                 </table>

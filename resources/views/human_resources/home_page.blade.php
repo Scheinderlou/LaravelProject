@@ -6,25 +6,7 @@
     <!-- Dashboard Content -->
 
     <div class="container mx-auto p-6">
-        <div class="flex gap-2 mb-4">
-            <button class="bg-[#001F3F] text-white px-4 py-2 text-sm rounded-md hover:bg-blue-600 transition">
-                Add employee
-            </button>
-            <button class="bg-[#001F3F] text-white px-4 py-2 text-sm rounded-md hover:bg-blue-600 transition">
-                Edit employee
-            </button>
-            <button class="bg-[#001F3F] text-white px-4 py-2 text-sm rounded-md hover:bg-blue-600 transition">
-                Add departments
-            </button>
-            <button class="bg-[#001F3F] text-white px-4 py-2 text-sm rounded-md hover:bg-blue-600 transition">
-                Add position
-            </button>
-            <a href="{{ route('view_page') }}">
-                <button class="bg-[#001F3F] text-white px-4 py-2 text-sm rounded-md hover:bg-blue-600 transition">
-                    Manage payroll
-                </button>
-            </a>
-        </div>
+
         <!-- Cards Section -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div class="bg-[#008080] shadow p-4 rounded-[16px]">
