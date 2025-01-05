@@ -13,6 +13,16 @@
 <body class=" bg-[#D9D9D9] flex items-center justify-center h-screen m-0">
     <div class="bg-slate-700 p-6 rounded-lg shadow-lg w-80 text-center">
         <h1 class="text-2xl font-bold text-white mb-6">Login</h1>
+        @if(session('error'))
+            <div class="mb-4 text-sm text-red-500">
+                {{ session('error') }}
+            </div>
+        @endif
+        @if(session('success'))
+            <div class="mb-4 text-sm text-green-500">
+                {{ session('success') }}
+            </div>
+        @endif
         <form action="{{route('login.post')}}" method="POST" class="space-y-4">
             @csrf
             <div class="text-left">

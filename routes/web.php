@@ -16,9 +16,13 @@ Route::get('/view_page', [PagesController::class, 'view_page'])->name('view_page
 Route::get('/edit_page', [PagesController::class, 'edit_page'])->name('edit_page');
 
 
-Route::get('/login', [AuthManager::class, 'login'])->name('login');
 Route::post('/login', [AuthManager::class, 'loginPost'])->name('login.post');
+Route::get('/home', function () {
+    return view('human_resources.home_page'); // Replace 'home' with your home page Blade file
+})->name('home_page');
 Route::get('/logout', [AuthManager::class, 'logout'])->name('logout');
+Route::get('/registration', [AuthManager::class, 'show'])->name('register');
+Route::post('/registration', [AuthManager::class, 'register'])->name('registerPost');
 //test purposes for tailwind
 Route::get('/test', function () {
     return view('Pages.test');
