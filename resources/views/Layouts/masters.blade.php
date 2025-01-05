@@ -10,10 +10,12 @@
     <div class="h-screen">
         <div class="bg-[#D9D9D9] flex h-full">
             <aside class="w-64 bg-[#001F3F] text-white flex flex-col p-4">
-                <a href="{{ route('home_page') }}" class="text-2xl font-bold mb-6">
+                <h1 class = "text-2xl font-bold mb-6">
                     HR
-                </a>
+                </h1>
                 <nav class="space-y-4">
+                    <a href="{{ route('home_page') }}"
+                        class="block py-2 px-4 rounded-[16px] hover:bg-blue-600">Dashboard</a>
                     <a href="{{ route('employees_page') }}"
                         class="block py-2 px-4 rounded-[16px] hover:bg-blue-600">Employees</a>
                     <a href="{{ route('view_page') }}"
@@ -32,8 +34,8 @@
                         <input type="text" placeholder="Search..." class="border rounded-[16px] px-4 py-2">
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf
-                        <button
-                            class="bg-blue-700 text-white px-4 py-2 rounded-[16px] hover:bg-blue-800">Logout</button>
+                            <button
+                                class="bg-blue-700 text-white px-4 py-2 rounded-[16px] hover:bg-blue-800">Logout</button>
                         </form>
                     </div>
                 </header>

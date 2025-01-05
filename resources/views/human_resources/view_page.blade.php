@@ -176,14 +176,15 @@
 
                                     </div>
                                 </div>
-                                <div class="flex justify-center gap-3 mt-3">
+                                <div class="flex justify-end gap-4 mt-6">
                                     <button type="submit"
-                                        class="px-4 py-1 text-white bg-green-600 rounded-md hover:bg-green-700 text-sm">
-                                        Save Changes
+                                        class="px-6 py-2 bg-green-600 hover:bg-green-700 text-white rounded-md shadow-md">
+                                        Save
                                     </button>
-                                    <button type="reset"
-                                        class="px-4 py-1 text-white bg-red-600 rounded-md hover:bg-red-700 text-sm">
-                                        Reset
+                                    <button type="button"
+                                        class="px-6 py-2 bg-red-600 hover:bg-red-700 text-white rounded-md shadow-md"
+                                        data-modal-toggle="crud-modal">
+                                        Cancel
                                     </button>
                                 </div>
                             </form>
