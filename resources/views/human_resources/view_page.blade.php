@@ -135,6 +135,8 @@
                                     </svg>
                                 </button>
                             </div>
+                            <!-- Form Section -->
+
                             <form class="p-4 md:p-5">
                                 <div class="flex gap-6">
                                     <div class="w-1/2">
@@ -150,25 +152,25 @@
                                         </p>
                                     </div>
 
-                                    <!-- Form Section -->
                                     <div class="w-1/2 space-y-4">
-                                        <div>
-                                            <label for="deduction" class="block text-sm font-medium">Total
+                                        <div class="flex flex-col">
+                                            <label for="deduction" class="text-sm font-medium mb-1">Total
                                                 Deduction</label>
-                                            <input type="number" id="deduction" name="deduction" value="200"
-                                                class="mt-1 block w-full border-gray-700 text-black  bg-[#D1D5DB] rounded-md shadow-md mb-3">
+                                            <input type="number" id="deduction" name="deduction"
+                                                class="block w-full px-4 py-2 bg-gray-400 text-black border border-gray-300 rounded-md shadow-md"
+                                                value="200">
                                         </div>
 
-                                        <div>
-                                            <label for="netpay" class="block text-md mb-3 font-medium">Net Pay</label>
+                                        <div class = "flex flex-col">
+                                            <label for="netpay" class=" text-sm font-medium mb-1">Net Pay</label>
                                             <input type="number" id="netpay" name="netpay" value="1750"
-                                                class="mt-1 block w-full border-gray-700 text-black  bg-[#D1D5DB] rounded-md shadow-md mb-3">
+                                                class="block w-full px-4 py-2 bg-gray-400 text-black border border-gray-300 rounded-md shadow-md">
                                         </div>
 
-                                        <div>
-                                            <label for="status" class="block text-md mb-3 font-medium">Status</label>
+                                        <div class = "flex flex-col">
+                                            <label for="status" class="text-sm font-medium mb-1">Status</label>
                                             <select id="status" name="status"
-                                                class="mt-1 block w-full border-gray-700 text-black rounded-md shadow-md mb-3 bg-[#D1D5DB]">
+                                                class="block w-full px-4 py-2 bg-gray-400 text-black border border-gray-300 rounded-md shadow-md">
                                                 <option value="Paid" selected>Paid</option>
                                                 <option value="Unpaid">Unpaid</option>
                                             </select>
@@ -188,16 +190,16 @@
                                     </button>
                                 </div>
                             </form>
-
                         </div>
                     </div>
                 </div>
-                <div class="mt-6 flex justify-end gap-4">
-                    <button class="bg-[#001F3F] text-white px-6 py-3 rounded-md hover:bg-blue-600 transition">
-                        Export Payroll Report
-                    </button>
-                </div>
+            </div>
+            <div class="mt-6 flex justify-end gap-4">
+                <button class="bg-[#001F3F] text-white px-6 py-3 rounded-md hover:bg-blue-600 transition">
+                    Export Payroll Report
+                </button>
             </div>
         </div>
+    </div>
     </div>
 @endsection

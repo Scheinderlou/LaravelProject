@@ -8,14 +8,7 @@
         <div class="flex gap-2 mb-4">
             <button data-modal-toggle="add-employee-modal"
                 class="bg-[#001F3F] text-white px-4 py-2 text-sm rounded-md hover:bg-blue-600 transition">
-                Add employee
-            </button>
-
-            <button class="bg-[#001F3F] text-white px-4 py-2 text-sm rounded-md hover:bg-blue-600 transition">
-                Add departments
-            </button>
-            <button class="bg-[#001F3F] text-white px-4 py-2 text-sm rounded-md hover:bg-blue-600 transition">
-                Add position
+                Create employee
             </button>
             <a href="{{ route('view_page') }}">
                 <button class="bg-[#001F3F] text-white px-4 py-2 text-sm rounded-md hover:bg-blue-600 transition">
@@ -150,7 +143,7 @@
                             <div class="flex flex-col">
                                 <label for="edit_staff_id" class="text-sm font-medium mb-1">Staff ID</label>
                                 <input type="text" id="edit_staff_id" name="staff_id"
-                                    class="block w-full px-4 py-2 bg-gray-100 text-black border border-gray-300 rounded-md shadow-md"
+                                    class="block w-full px-4 py-2 bg-gray-400 text-black border border-gray-300 rounded-md shadow-md"
                                     value="1" placeholder="Enter Staff ID" disabled>
                             </div>
 
