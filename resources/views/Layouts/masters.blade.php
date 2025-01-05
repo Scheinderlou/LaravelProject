@@ -14,13 +14,10 @@
                     HR
                 </h1>
                 <nav class="space-y-4">
-                    <a href="{{ route('home_page') }}"
+                    <a href="{{ route('admin_page') }}"
                         class="block py-2 px-4 rounded-[16px] hover:bg-blue-600">Dashboard</a>
-                    <a href="{{ route('employees_page') }}"
-                        class="block py-2 px-4 rounded-[16px] hover:bg-blue-600">Employees</a>
                     <a href="{{ route('view_page') }}"
                         class="block py-2 px-4 rounded-[16px] hover:bg-blue-600">Payroll</a>
-                    <a href="#" class="block py-2 px-4 rounded-[16px] hover:bg-blue-600">TBA</a>
                     <a href="#" class="block py-2 px-4 rounded-[16px] hover:bg-blue-600">TBA</a>
                     <a href="#" class="block py-2 px-4 rounded-[16px] hover:bg-blue-600">TBA</a>
                 </nav>
