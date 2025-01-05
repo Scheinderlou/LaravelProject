@@ -3,27 +3,43 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class AuthManager extends Controller
 {
-    function login() {
-        return view('admin');
+    // Show the login page
+    public function login()
+    {
+        return view('pages.admin');
     }
-    
-    function loginPost(Request $request) {
+
+    // Handle login form submission
+    public function loginPost(Request $request)
+    {
+        // Validate incoming request
+        
         $request->validate([
-            'email' => 'required',
-            'password' => 'password'
+            'email' => 'required|email',
+            'password' => 'required',
         ]);
 
         $credentials = $request->only('email', 'password');
-        if(Auth::attempt($credentials)){
-            return redirect()->intended(route('home'));
+
+        $credentials['password'] = bcrypt($credentials['password']);
+
+        if (Auth::attempt($credentials)) {
+            // Redirect to intended page or a default route (e.g., welcome)
+            return redirect()->intended(route('home_page'));
         }
-        return redirect(route('login'))->with("error", "Login details are not valid");
+
+        // Redirect back with an error message if authentication fails
+        return back()->with('error', 'Login details are not valid');
     }
 
-    function logout() {
+    // Log the user out
+    public function logout()
+    {
         Session::flush();
         Auth::logout();
         return redirect(route('login'));

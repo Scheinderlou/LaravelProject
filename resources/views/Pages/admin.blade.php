@@ -14,6 +14,7 @@
     <div class="bg-slate-700 p-6 rounded-lg shadow-lg w-80 text-center">
         <h1 class="text-2xl font-bold text-white mb-6">Login</h1>
         <form action="{{route('login.post')}}" method="POST" class="space-y-4">
+            @csrf
             <div class="text-left">
                 <label for="username" class="block text-sm font-medium text-gray-400"></label>
                 <input type="text" name="email" id="username" placeholder="Email" required
