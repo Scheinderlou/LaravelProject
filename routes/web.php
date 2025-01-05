@@ -20,7 +20,7 @@ Route::post('/login', [AuthManager::class, 'loginPost'])->name('login.post');
 Route::get('/home', function () {
     return view('human_resources.home_page'); // Replace 'home' with your home page Blade file
 })->name('home_page');
-Route::get('/logout', [AuthManager::class, 'logout'])->name('logout');
+Route::post('/logout', [AuthManager::class, 'logout'])->name('logout');
 Route::get('/registration', [AuthManager::class, 'show'])->name('register');
 Route::post('/registration', [AuthManager::class, 'register'])->name('registerPost');
 //test purposes for tailwind

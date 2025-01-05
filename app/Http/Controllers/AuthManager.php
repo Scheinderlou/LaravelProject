@@ -60,10 +60,12 @@ class AuthManager extends Controller
     }
 
     // Log the user out
-    public function logout()
+    public function logout(Request $request)
     {
-        Session::flush();
         Auth::logout();
-        return redirect(route('login'));
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('admin')->with('success', 'You have been logged out.');
     }
 }
