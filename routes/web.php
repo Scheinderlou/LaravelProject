@@ -14,7 +14,6 @@ Route::get('/employees_page', action: [PagesController::class, 'employees_page']
 Route::get('/payroll_page', [PagesController::class, 'payroll_page'])->name('payroll_page');
 Route::get('/view_page', [PagesController::class, 'view_page'])->name('view_page');
 Route::get('/edit_page', [PagesController::class, 'edit_page'])->name('edit_page');
-Route::get('/hash', [PagesController::class, 'hash']);
 
 
 Route::get('/login', [AuthManager::class, 'login'])->name('login');

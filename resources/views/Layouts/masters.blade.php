@@ -41,6 +41,8 @@
             </div>
         </div>
     </div>
+    <script src="{{ asset('js/pop-up.js') }}"></script>
+
 </body>
 
 </html>

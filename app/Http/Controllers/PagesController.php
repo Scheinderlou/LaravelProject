@@ -38,9 +38,4 @@ class PagesController extends Controller
     {
         return view('human_resources.edit_page');
     }
-
-    public function hash()
-    {
-        return view('pages.hashpass');
-    }
 }

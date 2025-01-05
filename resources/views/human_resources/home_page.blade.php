@@ -4,7 +4,9 @@
 
 @section('content')
     <!-- Dashboard Content -->
+
     <div class="container mx-auto p-6">
+
         <!-- Cards Section -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div class="bg-[#008080] shadow p-4 rounded-[16px]">
@@ -50,9 +52,10 @@
                             <td class="px-6 py-3">Software Engineer</td>
                             <td class="px-6 py-3">IT</td>
                             <td class="p-4">
-                                <span class="inline-block px-3 py-2 text-xs font-bold text-green-100 bg-green-700 rounded">
+                                <span class="inline-block px-2 py-1 text-xs font-bold text-green-200 bg-green-800 rounded">
                                     Active
                                 </span>
+
                             </td>
                         </tr>
                         <tr>
@@ -61,9 +64,10 @@
                             <td class="px-6 py-3">HR Manager</td>
                             <td class="px-6 py-3">HR</td>
                             <td class="p-4">
-                                <span class="inline-block px-3 py-2 text-xs font-bold text-green-100 bg-green-700 rounded">
+                                <span class="inline-block px-2 py-1 text-xs font-bold text-green-200 bg-green-800 rounded">
                                     Active
                                 </span>
+
                             </td>
                         </tr>
                         <tr>
@@ -72,9 +76,10 @@
                             <td class="px-6 py-3">Accountant</td>
                             <td class="px-6 py-3">Finance</td>
                             <td class="p-4">
-                                <span class="inline-block px-3 py-2 text-xs font-bold text-white bg-red-900 rounded">
-                                    On Leave
+                                <span class="inline-block px-2 py-1 text-xs font-bold text-green-200 bg-green-800 rounded">
+                                    Active
                                 </span>
+
                             </td>
                         </tr>
                     </tbody>

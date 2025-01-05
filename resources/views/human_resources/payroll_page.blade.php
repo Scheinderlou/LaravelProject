@@ -18,11 +18,11 @@
         </div>
 
         <div class="flex justify-end text-center mb-6">
-            <div class="p-5 bg-[#008080] rounded-lg">
-                <h2 class="font-bold text-md mb-2">Cyvielle Lagahid</h2>
-                <div class="flex flex-col items-center">
-                    <img src="{{ asset('img/test.jpg') }}" alt="Profile Picture"
-                        class="w-28 h-28 object-cover rounded-lg mb-3 border-none">
+            <div class="p-5 bg-[#008080] rounded-lg flex items-center space-x-4">
+                <img src="{{ asset('img/test.jpg') }}" alt="Profile Picture"
+                    class="w-28 h-28 object-cover rounded-lg border-none">
+                <div class="flex flex-col items-start">
+                    <h2 class="font-bold text-md mb-2">Cyvielle Lagahid</h2>
                     <div class="flex space-x-2">
                         <button class="px-2 py-1 bg-[#001F3F] text-white rounded text-sm">Import</button>
                         <button class="px-2 py-1 bg-[#001F3F] text-white rounded text-sm">Save</button>
@@ -31,6 +31,7 @@
                 </div>
             </div>
         </div>
+
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <!-- Personal Data -->
@@ -46,14 +47,14 @@
                         <option>Female</option>
                     </select>
                     <input placeholder="Department" class="p-2 rounded bg-[#D1D5DB]" />
-                    <select class="p-2 rounded bg-[#D1D5DB] text-gray-400">
-                        <option>Scale</option>
-                    </select>
+
                     <select class="p-2 rounded bg-[#D1D5DB] text-gray-400">
                         <option>Status</option>
                         <option>Paid</option>
                         <option>Unpaid</option>
                     </select>
+                    <input placeholder="Position" class="p-2 rounded bg-[#D1D5DB]" />
+
                 </div>
             </div>
 
