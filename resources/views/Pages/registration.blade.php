@@ -10,14 +10,14 @@
     <div class="container mt-5">
         <h2>Register</h2>
 
-        <!-- Display success message -->
+
         @if(session('success'))
             <div class="alert alert-success">
                 {{ session('success') }}
             </div>
         @endif
 
-        <!-- Display validation errors -->
+        
         @if($errors->any())
             <div class="alert alert-danger">
                 <ul>
@@ -28,7 +28,7 @@
             </div>
         @endif
 
-        <!-- Registration Form -->
+        
         <form method="POST" action="{{ route('registerPost') }}">
             @csrf
             <div class="mb-3">

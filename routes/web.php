@@ -18,7 +18,7 @@ Route::get('/edit_page', [PagesController::class, 'edit_page'])->name('edit_page
 
 Route::post('/login', [AuthManager::class, 'loginPost'])->name('login.post');
 Route::get('/home', function () {
-    return view('human_resources.home_page'); // Replace 'home' with your home page Blade file
+    return view('human_resources.home_page'); 
 })->name('home_page');
 Route::post('/logout', [AuthManager::class, 'logout'])->name('logout');
 Route::get('/registration', [AuthManager::class, 'show'])->name('register');

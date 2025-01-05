@@ -21,28 +21,28 @@ class AuthManager extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
-            'password' => 'required|min:6|confirmed', // Password confirmation required
+            'password' => 'required|min:6|confirmed', 
         ]);
-        // Create a new user
+        
         User::create([
             'name' => $request->input('name'),
             'email' => $request->input('email'),
-            'password' => Hash::make($request->input('password')), // Hash the password
+            'password' => Hash::make($request->input('password')), 
         ]);
 
-        // Redirect to a welcome or login page
+        
         return redirect()->route('login')->with('success', 'Registration successful. Please login.');
     }
-    // Show the login page
+   
     public function login()
     {
         return view('pages.admin');
     }
 
-    // Handle login form submission
+    
     public function loginPost(Request $request)
     {
-        // Validate the login inputs
+        
         $request->validate([
             'email' => 'required|email',
             'password' => 'required',
@@ -51,15 +51,15 @@ class AuthManager extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
-            // Redirect to the intended page on successful login
+
             return redirect()->intended(route('home_page'))->with('success', 'Welcome back!');
         }
 
-        // Redirect back to login page with an error message
+        
         return back()->with('error', 'Invalid email or password.');
     }
 
-    // Log the user out
+    
     public function logout(Request $request)
     {
         Auth::logout();
