@@ -53,9 +53,10 @@
                     <p class="text-3xl font-bold text-center">48.7</p>
                 </div>
                 <div class="bg-[#008080] p-4 rounded shadow">
-                    <h3 class=" font-semibold text-center">Average Sick Leave</h3>
-                    <p class="text-3xl font-bold text-center">2</p>
+                    <h3 class="font-semibold text-center">Bonus (2% of Salary)</h3>
+                    <p class="text-3xl font-bold text-center">P1000</p>
                 </div>
+
                 <div class="bg-[#008080] p-4 rounded shadow">
                     <h3 class=" font-semibold text-center">Net Pay Current Month</h3>
                     <p class="text-3xl font-bold text-center">P1,400.00</p>
@@ -68,7 +69,6 @@
 
             {{-- Charts Section  --}}
             <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                <!-- Bar Chart -->
                 <div class="bg-[#008080] p-4 rounded shadow">
                     <h3 class="text-lg font-bold text-center mb-4">Average Gross Salary by Each Department</h3>
                 </div>
@@ -88,17 +88,31 @@
                             <th class="border-none px-4 py-2">Account No.</th>
                             <th class="border-none px-4 py-2">Total Deduction</th>
                             <th class="border-none px-4 py-2">NetPay</th>
-                            <th class="border-none px-4 py-2">Status</th>
+                            <th class="border-none px-4 py-2">Bonus</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td class="border-none px-4 py-2">1</td>
-                            <td class="border-none px-4 py-2">Jezekiel Javier</td>
+                            <td class="border-none px-4 py-2">
+                                <div class="flex items-center gap-2">
+                                    <span>Jezekiel Javier</span>
+                                    <button data-modal-toggle="edit-netpay-modal"
+                                        class="inline-block px-2 py-1 text-xs font-bold text-white bg-blue-500 rounded">
+                                        Edit
+                                    </button>
+                                    <button data-modal-toggle="edit-bonus-modal"
+                                        class="inline-block px-2 py-1 text-xs font-bold text-white bg-blue-500 rounded">
+                                        Edit
+                                    </button>
+                                </div>
+                            </td>
+
                             <td class="border-none px-4 py-2">XYZ Bank</td>
                             <td class="border-none px-4 py-2">123456</td>
                             <td class="border-none px-4 py-2">$200</td>
                             <td class="border-none px-4 py-2">$1,750</td>
+                            <td class="border-none px-4 py-2">$500</td>
                             <td class="p-4">
                                 <span class="inline-block px-2 py-1 text-xs font-bold text-green-200 bg-green-800 rounded">
                                     Paid
@@ -106,7 +120,7 @@
                                 <span class="inline-block px-2 py-1 text-xs font-bold text-green-200 bg-red-800 rounded">
                                     Delete
                                 </span>
-                                <button data-modal-toggle="crud-modal"
+                                <button data-modal-toggle="edit-payroll-modal"
                                     class="inline-block px-2 py-1 text-xs font-bold text-white bg-[#EDA841] rounded">
                                     Edit
                                 </button>
@@ -114,10 +128,56 @@
                         </tr>
                     </tbody>
                 </table>
-
-                <div id="crud-modal" tabindex="-1" aria-hidden="true"
+                {{-- Edit Netpay --}}
+                <div id="edit-netpay-modal" tabindex="-1" aria-hidden="true"
                     class="hidden fixed inset-0 flex justify-center items-center z-50 text-white backdrop-blur-sm">
                     <div class="relative p-4 w-full max-w-2xl max-h-full"> <!-- Increased max-width -->
+                        <div class="relative rounded-lg shadow dark:bg-gray-700">
+                            <div
+                                class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                                <div class="w-full">
+                                    <h2 class="text-xl font-semibold">Netpay</h2>
+                                </div>
+                                <button type="button"
+                                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                                    data-modal-toggle="edit-netpay-modal">
+                                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 14 14">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{-- Edit Bonus --}}
+                <div id="edit-bonus-modal" tabindex="-1" aria-hidden="true"
+                    class="hidden fixed inset-0 flex justify-center items-center z-50 text-white backdrop-blur-sm">
+                    <div class="relative p-4 w-full max-w-2xl max-h-full"> <!-- Increased max-width -->
+                        <div class="relative rounded-lg shadow dark:bg-gray-700">
+                            <div
+                                class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                                <div class="w-full">
+                                    <h2 class="text-xl font-semibold">Bonus</h2>
+                                </div>
+                                <button type="button"
+                                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                                    data-modal-toggle="edit-bonus-modal">
+                                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 14 14">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{-- Edit payroll --}}
+                <div id="edit-payroll-modal" tabindex="-1" aria-hidden="true"
+                    class="hidden fixed inset-0 flex justify-center items-center z-50 text-white backdrop-blur-sm">
+                    <div class="relative p-4 w-full max-w-2xl max-h-full">
                         <div class="relative rounded-lg shadow dark:bg-gray-700">
                             <div
                                 class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
@@ -127,7 +187,7 @@
                                 </div>
                                 <button type="button"
                                     class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
-                                    data-modal-toggle="crud-modal">
+                                    data-modal-toggle="edit-payroll-modal">
                                     <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                         fill="none" viewBox="0 0 14 14">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -135,8 +195,6 @@
                                     </svg>
                                 </button>
                             </div>
-                            <!-- Form Section -->
-
                             <form class="p-4 md:p-5">
                                 <div class="flex gap-6">
                                     <div class="w-1/2">
@@ -185,7 +243,7 @@
                                     </button>
                                     <button type="button"
                                         class="px-6 py-2 bg-red-600 hover:bg-red-700 text-white rounded-md shadow-md"
-                                        data-modal-toggle="crud-modal">
+                                        data-modal-toggle="edit-payroll-modal">
                                         Cancel
                                     </button>
                                 </div>
@@ -200,6 +258,5 @@
                 </button>
             </div>
         </div>
-    </div>
     </div>
 @endsection

@@ -25,11 +25,6 @@
                     <input placeholder="Staff ID" class="p-2 shadow rounded bg-[#D1D5DB]  " />
                     <input placeholder="First Name" class="p-2 rounded bg-[#D1D5DB]" />
                     <input placeholder="Last Name" class="p-2 rounded bg-[#D1D5DB]" />
-                    <select class="p-2 rounded bg-[#D1D5DB] text-gray-400">
-                        <option>Sex</option>
-                        <option>Male</option>
-                        <option>Female</option>
-                    </select>
                     <input placeholder="Department" class="p-2 rounded bg-[#D1D5DB]" />
 
                     <select class="p-2 rounded bg-[#D1D5DB] text-gray-400">
