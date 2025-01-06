@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class hr_employees_model extends Model
 {
     use HasFactory;
+
+
 }
