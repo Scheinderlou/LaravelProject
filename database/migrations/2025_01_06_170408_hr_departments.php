@@ -11,15 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('hr_payroll', function (Blueprint $table) {
-            $table->integer('payroll_id'); 
-            $table->integer('employee_id');
-            $table->decimal('deductions');
-            $table->decimal('bonuses');
-            $table->decimal('netpay');
-            $table->date('payment_date');
-            $table->string('status');
-            
+        Schema::create('hr_departments', function (Blueprint $table) {
+            $table->id('department_id');
+            $table->string('department_name');
+
         });
     }
 

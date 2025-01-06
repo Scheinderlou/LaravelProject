@@ -11,11 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('hr_jobs', function (Blueprint $table) {
-            $table->integer('job_id');
-            $table->string('job_title');
-            $table->decimal('base_salary');
-        }); 
+        Schema::create('qa_defects', function (Blueprint $table) {
+            $table->id('defect_id');
+            $table->unsignedBigInteger('check_id');
+            $table->string('severity');
+            $table->string('resolution');
+
+            $table->foreign('check_id')->references('check_id')->on('qa_quality_checks')->onDelete('cascade');
+
+        });
     }
 
     /**

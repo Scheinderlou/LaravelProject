@@ -6,16 +6,22 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-   
+    /**
+     * Run the migrations.
+     */
     public function up(): void
     {
-        Schema::create('hr_departments', function (Blueprint $table) {
-            $table->id('department_id'); 
-            $table->string('department_name');
-            
+        Schema::create('hr_jobs', function (Blueprint $table) {
+            $table->id('job_id');
+            $table->string('job_title');
+            $table->decimal('base_salary');
+
         });
     }
 
+    /**
+     * Reverse the migrations.
+     */
     public function down(): void
     {
         //
