@@ -52,7 +52,7 @@ class AuthManager extends Controller
 
         if (Auth::attempt($credentials)) {
 
-            return redirect()->intended(route('home_page'))->with('success', 'Welcome back!');
+            return redirect()->intended(route('admin_page'))->with('success', 'Welcome back!');
         }
 
         
