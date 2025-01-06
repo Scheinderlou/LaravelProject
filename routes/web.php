@@ -6,6 +6,7 @@ use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
 //Added controller
+Route::get('/user', [PagesController::class, 'user'])->name('user');
 Route::get('/welcome', [PagesController::class, 'welcome']);
 Route::get('/login', [PagesController::class, 'admin'])->name('admin');
 Route::get('/dashboard_qa', [PagesController::class, 'dashboard_qa']);
@@ -22,7 +23,3 @@ Route::get('/admin', function () {
 Route::post('/logout', [AuthManager::class, 'logout'])->name('logout');
 Route::get('/registration', [AuthManager::class, 'show'])->name('register');
 Route::post('/registration', [AuthManager::class, 'register'])->name('registerPost');
-//test purposes for tailwind
-Route::get('/test', function () {
-    return view('Pages.test');
-});

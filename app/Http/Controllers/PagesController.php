@@ -10,6 +10,10 @@ class PagesController extends Controller
     {
         return view('pages.welcome');
     }
+    public function user()
+    {
+        return view('users.user');
+    }
     public function admin()
     {
         return view('pages.admin');
