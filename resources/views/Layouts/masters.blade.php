@@ -18,8 +18,9 @@
                         class="block py-2 px-4 rounded-[16px] hover:bg-blue-600">Dashboard</a>
                     <a href="{{ route('view_page') }}"
                         class="block py-2 px-4 rounded-[16px] hover:bg-blue-600">Payroll</a>
-                    <a href="#" class="block py-2 px-4 rounded-[16px] hover:bg-blue-600">TBA</a>
-                    <a href="#" class="block py-2 px-4 rounded-[16px] hover:bg-blue-600">TBA</a>
+                    <a href="{{ route('job_page') }}" class="block py-2 px-4 rounded-[16px] hover:bg-blue-600">Jobs</a>
+                    <a href="{{ route('department_page') }}"
+                        class="block py-2 px-4 rounded-[16px] hover:bg-blue-600">Departments</a>
                 </nav>
             </aside>
 

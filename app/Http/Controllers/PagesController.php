@@ -38,4 +38,12 @@ class PagesController extends Controller
     {
         return view('human_resources.edit_page');
     }
+    public function job_page()
+    {
+        return view('human_resources.job_page');
+    }
+    public function department_page()
+    {
+        return view('human_resources.department_page');
+    }
 }

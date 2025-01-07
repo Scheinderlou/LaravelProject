@@ -21,6 +21,7 @@
                 <div>
                     <h2 class="text-2xl font-bold mb-3 ">Jezekiel Javier</h2>
                     <p class="mb-3">Staff ID: <span class="text-red-500">1</span></p>
+                    <p class=" mb-3 ">Email: Jezekiel.javier@gmail.com</p>
                     <p class="mb-3">Department: XYZ Department</p>
                     <p class="mb-3">Position: Software Developer</p>
                 </div>
@@ -91,11 +92,6 @@
                                 <label for="employee_email" class="block text-sm font-medium">Employee Email</label>
                                 <input type="email" id="employee_email" name="employee_email"
                                     value="jezekiel@email.com"
-                                    class="bg-gray-400 text-black block w-full px-4 py-2 mt-1 rounded" required>
-                            </div>
-                            <div class="mb-5">
-                                <label for="employee_phone" class="block text-sm font-medium">Employee Phone</label>
-                                <input type="tel" id="employee_phone" name="employee_phone" value="123-456-7890"
                                     class="bg-gray-400 text-black block w-full px-4 py-2 mt-1 rounded" required>
                             </div>
                             <div class="flex justify-end gap-4">

@@ -14,6 +14,9 @@ Route::get('/admin_page', [PagesController::class, 'admin_page'])->name('admin_p
 Route::get('/payroll_page', [PagesController::class, 'payroll_page'])->name('payroll_page');
 Route::get('/view_page', [PagesController::class, 'view_page'])->name('view_page');
 Route::get('/edit_page', [PagesController::class, 'edit_page'])->name('edit_page');
+Route::get('/job_page', [PagesController::class, 'job_page'])->name('job_page');
+Route::get('/department_page', [PagesController::class, 'department_page'])->name('department_page');
+
 
 
 Route::post('/login', [AuthManager::class, 'loginPost'])->name('login.post');

@@ -117,9 +117,9 @@
                                 <span class="inline-block px-2 py-1 text-xs font-bold text-green-200 bg-green-800 rounded">
                                     Paid
                                 </span>
-                                <span class="inline-block px-2 py-1 text-xs font-bold text-green-200 bg-red-800 rounded">
+                                <button class="inline-block px-2 py-1 text-xs font-bold text-white bg-red-600 rounded">
                                     Delete
-                                </span>
+                                </button>
                                 <button data-modal-toggle="edit-payroll-modal"
                                     class="inline-block px-2 py-1 text-xs font-bold text-white bg-[#EDA841] rounded">
                                     Edit

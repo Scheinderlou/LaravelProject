@@ -43,10 +43,11 @@
         <table class="min-w-full text-left text-md rounded-[14px] bg-[#008080]">
             <thead>
                 <tr>
-                    <th class="px-6 py-3">Staff</th>
-                    <th class="px-6 py-3">Name</th>
-                    <th class="px-6 py-3">Position</th>
-                    <th class="px-6 py-3">Department</th>
+                    <th class="px-6 py-3 font-medium">Staff</th>
+                    <th class="px-6 py-3 font-medium">Name</th>
+                    <th class="px-6 py-3 font-medium">Position</th>
+                    <th class="px-6 py-3 font-medium">Department</th>
+                    <th class="px-6 py-3 font-medium">Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -121,13 +122,10 @@
                             </div>
 
                             <div class="flex flex-col">
-                                <label for="status" class="text-sm font-medium mb-1">Status</label>
-                                <select id="status" name="status"
-                                    class="block w-full px-4 py-2 bg-gray-100 text-black border border-gray-300 rounded-md shadow-md">
-                                    <option value="Active">Active</option>
-                                    <option value="On Leave">On Leave</option>
-                                    <option value="Resigned">Resigned</option>
-                                </select>
+                                <label for="position" class="text-sm font-medium mb-1">Password</label>
+                                <input type="password" id="position" name="password"
+                                    class="block w-full px-4 py-2 bg-gray-100 text-black border border-gray-300 rounded-md shadow-md"
+                                    placeholder="Password">
                             </div>
                         </div>
 
