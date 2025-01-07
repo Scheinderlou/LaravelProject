@@ -11,7 +11,7 @@
         <div class="bg-[#D9D9D9] flex h-full">
             <aside class="w-64 bg-[#001F3F] text-white flex flex-col p-4">
                 <h1 class = "text-2xl font-bold mb-6">
-                    HR
+                    Human Resources
                 </h1>
                 <nav class="space-y-4">
                     <a href="{{ route('admin_page') }}"
