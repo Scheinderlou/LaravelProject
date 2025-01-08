@@ -12,23 +12,28 @@ use Illuminate\Support\Facades\Route;
 //Added controller
 Route::get('/user', [PagesController::class, 'user'])->name('user');
 Route::get('/welcome', [PagesController::class, 'welcome']);
-Route::get('/login', [PagesController::class, 'admin'])->name('admin');
+Route::get('/login', function () {
+    return view('pages.admin');
+})->name('login');
 Route::get('/dashboard_qa', [PagesController::class, 'dashboard_qa']);
-Route::get('/payroll_page', [PagesController::class, 'payroll_page'])->name('payroll_page');
+Route::get('/payroll_page', [PagesController::class, 'payroll_page'])->name('payroll_page')->middleware('auth');
 Route::get('/view_page', [PagesController::class, 'view_page'])->name('view_page');
 Route::get('/edit_page', [PagesController::class, 'edit_page'])->name('edit_page');
-Route::get('/job_page', [PagesController::class, 'job_page'])->name('job_page');
-Route::get('/department_page', [PagesController::class, 'department_page'])->name('department_page');
+Route::get('/job_page', [PagesController::class, 'job_page'])->name('job_page')->middleware('auth');
+Route::get('/department_page', [PagesController::class, 'department_page'])->name('department_page')->middleware('auth');
 Route::get('/defects_page', [PagesController::class, 'defects_page'])->name('defects_page');
 Route::get('/qa_checks', [PagesController::class, 'qa_checks'])->name('qa_checks');
 Route::get('/tp_page', [PagesController::class, 'tp_page'])->name('tp_page');
-Route::get('/admin', [employeeController::class, 'inJoin'])->name('admin_page');
+Route::get('/admin', [employeeController::class, 'inJoin'])->name('admin_page')->middleware('auth');
 
 
 
 Route::post('/login', [AuthManager::class, 'loginPost'])->name('login.post');
 
-Route::post('/logout', [AuthManager::class, 'logout'])->name('logout');
+Route::post('/logout', function () {
+    Auth::logout();
+    return redirect('/login');
+})->name('logout');
 Route::get('/registration', [AuthManager::class, 'show'])->name('register');
 Route::post('/registration', [AuthManager::class, 'register'])->name('registerPost');
 Route::post('/job_page', [functionController::class, 'store'])->name('addJob.store');
