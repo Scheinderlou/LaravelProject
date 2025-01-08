@@ -207,17 +207,7 @@
                                 <input type="text" id="edit_position" name="position"
                                     class="block w-full px-4 py-2 bg-gray-100 text-black border border-gray-300 rounded-md shadow-md"
                                     value="Software Developer" placeholder="Enter Position">
-                            </div>
-
-                            <div class="flex flex-col">
-                                <label for="edit_status" class="text-sm font-medium mb-1">Status</label>
-                                <select id="edit_status" name="status"
-                                    class="block w-full px-4 py-2 bg-gray-100 text-black border border-gray-300 rounded-md shadow-md">
-                                    <option value="Active" selected>Active</option>
-                                    <option value="On Leave">On Leave</option>
-                                    <option value="Resigned">Resigned</option>
-                                </select>
-                            </div>
+                            </div>  
                         </div>
 
                         <div class="flex justify-end gap-4 mt-6">
