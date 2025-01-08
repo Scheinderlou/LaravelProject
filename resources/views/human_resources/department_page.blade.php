@@ -18,9 +18,10 @@
                     </tr>
                 </thead>
                 <tbody>
+                @foreach($departments as $department)
                     <tr>
-                        <td class="px-6 py-3 text-center text-sm text-black">1</td>
-                        <td class="px-6 py-3 text-center text-sm text-black">Human Resources</td>
+                        <td class="px-6 py-3 text-center text-sm text-black">{{ $department->department_id }}</td>
+                        <td class="px-6 py-3 text-center text-sm text-black">{{ $department->department_name }}</td>
                         <td class="px-6 py-3 text-center">
                             <button
                                 class="inline-block px-2 py-1 text-xs font-bold text-white bg-red-600 rounded hover:bg-red-700">
@@ -32,20 +33,7 @@
                             </button>
                         </td>
                     </tr>
-                    <tr>
-                        <td class="px-6 py-3 text-center text-sm text-black">2</td>
-                        <td class="px-6 py-3 text-center text-sm text-black">IT Department</td>
-                        <td class="px-6 py-3 text-center">
-                            <button
-                                class="inline-block px-2 py-1 text-xs font-bold text-white bg-red-600 rounded hover:bg-red-700">
-                                Delete
-                            </button>
-                            <button data-modal-toggle="edit-department-modal"
-                                class="inline-block px-2 py-1 text-xs font-bold text-white bg-yellow-500 rounded hover:bg-yellow-600">
-                                Edit
-                            </button>
-                        </td>
-                    </tr>
+                    @endforeach
                 </tbody>
             </table>
             <!--Add Department Modal-->
@@ -64,7 +52,8 @@
                             </svg>
                         </button>
                     </div>
-                    <form class="pt-4">
+                    <form class="pt-4" method="POST" action="{{ route('addDepartment') }}">
+                        @csrf
                         <div class="flex flex-col mb-4">
                             <label for="department_name" class="text-sm font-medium mb-1">Department Name</label>
                             <input type="text" id="department_name" name="department_name"

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\hr_departments_model;
+use App\Models\hr_jobs_model;
 use Illuminate\Http\Request;
 //Controller
 class PagesController extends Controller
@@ -40,10 +42,12 @@ class PagesController extends Controller
     }
     public function job_page()
     {
-        return view('human_resources.job_page');
+        $jobs = hr_jobs_model::all();
+        return view('human_resources.job_page', compact('jobs'));
     }
     public function department_page()
     {
-        return view('human_resources.department_page');
+        $departments = hr_departments_model::all();
+        return view('human_resources.department_page', compact('departments'));
     }
 }

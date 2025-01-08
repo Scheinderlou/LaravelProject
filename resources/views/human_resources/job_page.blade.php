@@ -20,10 +20,11 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach($jobs as $job)
                     <tr>
-                        <td class="px-6 py-3 text-center text-md text-black">1</td>
-                        <td class="px-6 py-3 text-center text-md text-black">Software Developer</td>
-                        <td class="px-6 py-3 text-center text-md text-black">P75,000</td>
+                        <td class="px-6 py-3 text-center text-md text-black">{{$job->job_id}}</td>
+                        <td class="px-6 py-3 text-center text-md text-black">{{$job->job_title}}</td>
+                        <td class="px-6 py-3 text-center text-md text-black">{{$job->base_salary}}</td>
                         <td class="px-6 py-3 text-center">
                             <button
                                 class="inline-block px-2 py-1 text-xs font-bold text-white bg-red-600 rounded hover:bg-red-700">
@@ -35,6 +36,7 @@
                             </button>
                         </td>
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
