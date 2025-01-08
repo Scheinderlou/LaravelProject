@@ -50,4 +50,17 @@ class PagesController extends Controller
         $departments = hr_departments_model::all();
         return view('human_resources.department_page', compact('departments'));
     }
+
+    public function defects_page()
+    {
+        return view('qa_pages.defects_page');
+    }
+    public function qa_checks()
+    {
+        return view('qa_pages.qa_checks');
+    }
+    public function tp_page()
+    {
+        return view('qa_pages.tp_page');
+    }
 }

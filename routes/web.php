@@ -18,6 +18,9 @@ Route::get('/view_page', [PagesController::class, 'view_page'])->name('view_page
 Route::get('/edit_page', [PagesController::class, 'edit_page'])->name('edit_page');
 Route::get('/job_page', [PagesController::class, 'job_page'])->name('job_page');
 Route::get('/department_page', [PagesController::class, 'department_page'])->name('department_page');
+Route::get('/defects_page', [PagesController::class, 'defects_page'])->name('defects_page');
+Route::get('/qa_checks', [PagesController::class, 'qa_checks'])->name('qa_checks');
+Route::get('/tp_page', [PagesController::class, 'tp_page'])->name('tp_page');
 
 
 

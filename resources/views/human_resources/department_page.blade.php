@@ -1,4 +1,4 @@
-@extends('layouts.masters')
+@extends('layouts.hr_layouts')
 
 @section('title', 'Department - Page')
 
@@ -18,21 +18,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                @foreach($departments as $department)
-                    <tr>
-                        <td class="px-6 py-3 text-center text-sm text-black">{{ $department->department_id }}</td>
-                        <td class="px-6 py-3 text-center text-sm text-black">{{ $department->department_name }}</td>
-                        <td class="px-6 py-3 text-center">
-                            <button
-                                class="inline-block px-2 py-1 text-xs font-bold text-white bg-red-600 rounded hover:bg-red-700">
-                                Delete
-                            </button>
-                            <button data-modal-toggle="edit-department-modal"
-                                class="inline-block px-2 py-1 text-xs font-bold text-white bg-yellow-500 rounded hover:bg-yellow-600">
-                                Edit
-                            </button>
-                        </td>
-                    </tr>
+                    @foreach ($departments as $department)
+                        <tr>
+                            <td class="px-6 py-3 text-center text-sm text-black">{{ $department->department_id }}</td>
+                            <td class="px-6 py-3 text-center text-sm text-black">{{ $department->department_name }}</td>
+                            <td class="px-6 py-3 text-center">
+                                <button
+                                    class="inline-block px-2 py-1 text-xs font-bold text-white bg-red-600 rounded hover:bg-red-700">
+                                    Delete
+                                </button>
+                                <button data-modal-toggle="edit-department-modal"
+                                    class="inline-block px-2 py-1 text-xs font-bold text-white bg-yellow-500 rounded hover:bg-yellow-600">
+                                    Edit
+                                </button>
+                            </td>
+                        </tr>
                     @endforeach
                 </tbody>
             </table>
