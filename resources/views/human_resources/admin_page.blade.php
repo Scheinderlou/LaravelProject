@@ -94,9 +94,10 @@
                             </div>
                             <div class="flex flex-col">
                                 <label for="job_id" class="text-sm font-medium mb-1">Job ID</label>
-                                <input type="text" id="job_id" name="job_id"
-                                    class="block w-full px-4 py-2 bg-gray-100 text-black border border-gray-300 rounded-md shadow-md"
-                                    placeholder="Enter Employee ID">
+                                <select id="job_id" name="job_id"
+                                    class="block w-full px-4 py-2 bg-gray-100 text-black border border-gray-300 rounded-md shadow-md">
+                                    <option value="" disabled selected>Job ID</option>
+                                </select>
                             </div>
 
                             <div class="flex flex-col">
@@ -120,21 +121,23 @@
                                     <option value="" disabled selected>Select Department</option>
                                 </select>
                             </div>
-
                             <div class="flex flex-col">
-                                <label for="job_title_select" class="text-sm font-medium mb-1">Job Title</label>
-                                <select id="job_title_select" name="job_title"
-                                    class="block w-full px-4 py-2 bg-gray-100 text-black border border-gray-300 rounded-md shadow-md">
-                                    <option value="" disabled selected>Select Job Title</option>
-                                </select>
+                                <label for="job_title_select" class="text-sm font-medium mb-1">Date of Birth</label>
+                                <input type="date"
+                                    class = "block w-full px-4 py-2 bg-gray-100 text-black border border-gray-300 rounded-md shadow-md"
+                                    id="birthday" name="birthday">
                             </div>
-
-
                             <div class="flex flex-col">
-                                <label for="position" class="text-sm font-medium mb-1">Password</label>
-                                <input type="password" id="position" name="password"
+                                <label for="password" class="text-sm font-medium mb-1">Password</label>
+                                <input type="password" id="password" name="password"
                                     class="block w-full px-4 py-2 bg-gray-100 text-black border border-gray-300 rounded-md shadow-md"
                                     placeholder="Password">
+                            </div>
+                            <div class="flex flex-col">
+                                <label for="address" class="text-sm font-medium mb-1">Address</label>
+                                <input type="text" id="address" name="address"
+                                    class="block w-full px-4 py-2 bg-gray-100 text-black border border-gray-300 rounded-md shadow-md"
+                                    placeholder="Address">
                             </div>
                         </div>
 
