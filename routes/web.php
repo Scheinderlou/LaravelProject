@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthManager;
+use App\Http\Controllers\functionController;
 use App\Http\Controllers\PagesController;
 
 use Illuminate\Support\Facades\Route;
@@ -26,3 +27,4 @@ Route::get('/admin', function () {
 Route::post('/logout', [AuthManager::class, 'logout'])->name('logout');
 Route::get('/registration', [AuthManager::class, 'show'])->name('register');
 Route::post('/registration', [AuthManager::class, 'register'])->name('registerPost');
+Route::post('/job_page', [functionController::class, 'store'])->name('addJob.store');

@@ -93,7 +93,8 @@
                         </svg>
                     </button>
                 </div>
-                <form class="pt-4">
+                <form action="{{ route('addJob.store') }}" class="pt-4" method="POST" >
+                    @csrf
                     <div class="grid grid-cols-2 gap-6">
                         <div class="flex flex-col">
                             <label for="edit_job_id" class="text-sm font-medium mb-1">Job ID</label>
