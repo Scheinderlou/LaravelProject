@@ -3,6 +3,9 @@
 @section('title', 'Department - Page')
 
 @section('content')
+@push('scripts')
+<script src="{{ asset('js/editdepartment.js') }}"></script>  <!-- Linking the external script -->
+@endpush
     <div class="container mx-auto p-6">
         <div class="flex gap-2 mb-4">
             <button class="px-6 py-2 text-white bg-[#001F3F] rounded-md hover:bg-blue-600 transition"
@@ -28,7 +31,7 @@
                                     Delete
                                 </button>
                                 <button data-modal-toggle="edit-department-modal"
-                                    class="inline-block px-2 py-1 text-xs font-bold text-white bg-yellow-500 rounded hover:bg-yellow-600">
+                                    class="inline-block px-2 py-1 text-xs font-bold text-white bg-yellow-500 rounded hover:bg-yellow-600" onclick="populateEditModal({{ $department->department_id }}, '{{ $department->department_name }}')">
                                     Edit
                                 </button>
                             </td>
@@ -90,18 +93,20 @@
                             </svg>
                         </button>
                     </div>
-                    <form class="pt-4">
+                    <form class="pt-4" action="{{ route('updateDepartmentPost', ['department_id' => 'department_id_placeholder']) }}">
+                        @csrf
+                        @method ('PUT')
                         <div class="flex flex-col mb-4">
                             <label for="edit_department_id" class="text-sm font-medium mb-1">Department ID</label>
                             <input type="text" id="edit_department_id" name="department_id"
                                 class="block w-full px-4 py-2 bg-gray-400 text-red-500 border border-gray-300 rounded-md shadow-md"
-                                value="1" placeholder="Enter Department ID" disabled>
+                                value="" placeholder="Enter Department ID" disabled>
                         </div>
                         <div class="flex flex-col mb-4">
                             <label for="edit_department_name" class="text-sm font-medium mb-1">Department Name</label>
                             <input type="text" id="edit_department_name" name="department_name"
                                 class="block w-full px-4 py-2 bg-gray-100 text-black border border-gray-300 rounded-md shadow-md"
-                                value="IT Department" placeholder="Enter Department Name">
+                                value="" placeholder="Enter Department Name">
                         </div>
                         <div class="flex justify-end gap-4 mt-6">
                             <button type="submit"

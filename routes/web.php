@@ -34,4 +34,5 @@ Route::post('/registration', [AuthManager::class, 'register'])->name('registerPo
 Route::post('/job_page', [functionController::class, 'store'])->name('addJob.store');
 Route::post('/department_page', [departmentController::class, 'addDepartment'])->name('addDepartment');
 Route::put('/job/{id}/update', [functionController::class, 'editJobPost'])->name('editJobPost');
+Route::put('/hr_departments/{department_id}/update', [departmentController::class, 'updateDepartmentPost'])->name('updateDepartmentPost');
 

@@ -45,7 +45,7 @@
         </div>
     </div>
     <script src="{{ asset('js/pop-up.js') }}"></script>
-
+    @stack('scripts')
 </body>
 
 </html>
