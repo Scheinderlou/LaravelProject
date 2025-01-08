@@ -96,28 +96,29 @@
                         </svg>
                     </button>
                 </div>
-                <form class="pt-4">
-                    
+                <form class="pt-4" method="POST" action="{{ route('editJobPost', $job->job_id) }}">
+                    @csrf
+                    @method('PUT')
                     <div class="grid grid-cols-2 gap-6">
                         <div class="flex flex-col">
                             <label for="edit_job_id" class="text-sm font-medium mb-1">Job ID</label>
                             <input type="text" id="edit_job_id" name="job_id"
                                 class="block w-full px-4 py-2 bg-gray-400 text-red-500 border border-gray-300 rounded-md shadow-md"
-                                value="1" placeholder="Enter Job ID" disabled>
+                                value="{{ $job->job_id }}" placeholder="Enter Job ID" disabled>
                         </div>
 
                         <div class="flex flex-col">
                             <label for="edit_job_title" class="text-sm font-medium mb-1">Job Title</label>
                             <input type="text" id="edit_job_title" name="job_title"
                                 class="block w-full px-4 py-2 bg-gray-100 text-black border border-gray-300 rounded-md shadow-md"
-                                value="Software Developer" placeholder="Enter Job Title">
+                                value="{{ old('job_title', $job->job_title) }}" placeholder="Enter Job Title">
                         </div>
 
                         <div class="flex flex-col">
                             <label for="edit_base_salary" class="text-sm font-medium mb-1">Base Salary</label>
                             <input type="number" id="edit_base_salary" name="base_salary"
                                 class="block w-full px-4 py-2 bg-gray-100 text-black border border-gray-300 rounded-md shadow-md"
-                                value="75000" placeholder="Enter Base Salary">
+                                value="{{ old('base_salary', $job->base_salary) }}" placeholder="Enter Base Salary">
                         </div>
                     </div>
 

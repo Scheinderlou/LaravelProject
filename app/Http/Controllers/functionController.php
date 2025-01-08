@@ -23,6 +23,24 @@ class functionController extends Controller
         ]);
 
         return redirect()->route('job_page')->with('success', 'Job added successfully!');
+
+    }
+
+    public function editJobPost(Request $request, $job_id)
+    {
+        $request->validate([
+            'job_title' => 'required|string|max:255',
+            'base_salary' => 'required|numeric|min:0',
+        ]);
+
+        $job = hr_jobs_model::findOrFail($job_id);
+        $job->update([
+            'job_title' => $request->input('job_title'),
+            'base_salary' => $request->input('base_salary'),
+        ]);
+
+        return redirect()->route('job_page')->with('success', 'Job updated successfully!');
+
     }
    
 }
