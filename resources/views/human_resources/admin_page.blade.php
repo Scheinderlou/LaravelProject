@@ -40,6 +40,7 @@
                 </button>
             </a>
         </div>
+    @if(isset($users) && count($users) > 0)
         <table class="min-w-full text-left text-md rounded-[14px] bg-[#008080]">
             <thead>
                 <tr>
@@ -227,6 +228,7 @@
                 </div>
             </div>
         </table>
+        @endif
     </div>
 
 @endsection

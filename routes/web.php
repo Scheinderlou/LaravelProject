@@ -6,6 +6,7 @@ use App\Http\Controllers\employeeController;
 use App\Http\Controllers\functionController;
 use App\Http\Controllers\PagesController;
 
+use App\Http\Controllers\searchBarController;
 use Illuminate\Support\Facades\Route;
 
 //Added controller

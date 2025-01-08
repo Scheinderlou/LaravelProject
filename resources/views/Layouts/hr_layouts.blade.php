@@ -30,6 +30,7 @@
                     <h2 class="text-xl text-white font-semibold">Welcome, Admin</h2>
                     <div class="flex items-center space-x-4">
                         <input type="text" placeholder="Search..." class="border rounded-[16px] px-4 py-2">
+
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf
                             <button
