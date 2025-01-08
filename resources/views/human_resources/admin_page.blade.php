@@ -51,11 +51,12 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach ($results as $result)
                 <tr>
-                    <td class="px-6 py-3">1</td>
-                    <td class="px-6 py-3">Javier Jezekiel</td>
-                    <td class="px-6 py-3">Software Engineer</td>
-                    <td class="px-6 py-3">IT</td>
+                    <td class="px-6 py-3">{{ $result->employee_id }}</td>
+                    <td class="px-6 py-3">{{ $result->name }}</td>
+                    <td class="px-6 py-3">{{ $result->job_title }}</td>
+                    <td class="px-6 py-3">{{ $result->department_name }}</td>
                     <td class="p-4">
                         <button class="inline-block px-2 py-1 text-xs font-bold text-green-200 bg-red-500 rounded">
                             Delete
@@ -66,6 +67,7 @@
                         </button>
                     </td>
                 </tr>
+                @endforeach()
             </tbody>
 
             <!-- Add Employee Modal -->

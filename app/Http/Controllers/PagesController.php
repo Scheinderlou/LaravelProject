@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\hr_departments_model;
+use App\Models\hr_employees_model;
 use App\Models\hr_jobs_model;
 use Illuminate\Http\Request;
 //Controller
@@ -26,7 +27,8 @@ class PagesController extends Controller
     }
     public function admin_page()
     {
-        return view('human_resources.admin_page');
+        $employees = hr_employees_model::all();
+        return view('human_resources.admin_page', compact('employees'));
     }
     public function payroll_page()
     {
