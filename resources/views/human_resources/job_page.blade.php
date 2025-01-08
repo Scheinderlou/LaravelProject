@@ -1,4 +1,4 @@
-@extends('layouts.masters')
+@extends('layouts.hr_layouts')
 
 @section('title', 'Job - page')
 
@@ -20,22 +20,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($jobs as $job)
-                    <tr>
-                        <td class="px-6 py-3 text-center text-md text-black">{{$job->job_id}}</td>
-                        <td class="px-6 py-3 text-center text-md text-black">{{$job->job_title}}</td>
-                        <td class="px-6 py-3 text-center text-md text-black">{{$job->base_salary}}</td>
-                        <td class="px-6 py-3 text-center">
-                            <button
-                                class="inline-block px-2 py-1 text-xs font-bold text-white bg-red-600 rounded hover:bg-red-700">
-                                Delete
-                            </button>
-                            <button data-modal-toggle="edit-job-modal"
-                                class="inline-block px-2 py-1 text-xs font-bold text-white bg-[#EDA841] rounded hover:bg-[#e09c3a]">
-                                Edit
-                            </button>
-                        </td>
-                    </tr>
+                    @foreach ($jobs as $job)
+                        <tr>
+                            <td class="px-6 py-3 text-center text-md text-black">{{ $job->job_id }}</td>
+                            <td class="px-6 py-3 text-center text-md text-black">{{ $job->job_title }}</td>
+                            <td class="px-6 py-3 text-center text-md text-black">{{ $job->base_salary }}</td>
+                            <td class="px-6 py-3 text-center">
+                                <button
+                                    class="inline-block px-2 py-1 text-xs font-bold text-white bg-red-600 rounded hover:bg-red-700">
+                                    Delete
+                                </button>
+                                <button data-modal-toggle="edit-job-modal"
+                                    class="inline-block px-2 py-1 text-xs font-bold text-white bg-[#EDA841] rounded hover:bg-[#e09c3a]">
+                                    Edit
+                                </button>
+                            </td>
+                        </tr>
                     @endforeach
                 </tbody>
             </table>
@@ -97,7 +97,7 @@
                     </button>
                 </div>
                 <form class="pt-4">
-                    
+
                     <div class="grid grid-cols-2 gap-6">
                         <div class="flex flex-col">
                             <label for="edit_job_id" class="text-sm font-medium mb-1">Job ID</label>
