@@ -87,10 +87,16 @@
                     <form class="pt-4">
                         <div class="grid grid-cols-2 gap-6">
                             <div class="flex flex-col">
-                                <label for="staff_id" class="text-sm font-medium mb-1">Staff ID</label>
-                                <input type="text" id="staff_id" name="staff_id"
+                                <label for="employee_id" class="text-sm font-medium mb-1">Employee ID</label>
+                                <input type="text" id="employee_id" name="employee_id"
                                     class="block w-full px-4 py-2 bg-gray-100 text-black border border-gray-300 rounded-md shadow-md"
-                                    placeholder="Enter Staff ID">
+                                    placeholder="Enter Employee ID">
+                            </div>
+                            <div class="flex flex-col">
+                                <label for="job_id" class="text-sm font-medium mb-1">Job ID</label>
+                                <input type="text" id="job_id" name="job_id"
+                                    class="block w-full px-4 py-2 bg-gray-100 text-black border border-gray-300 rounded-md shadow-md"
+                                    placeholder="Enter Employee ID">
                             </div>
 
                             <div class="flex flex-col">
@@ -108,18 +114,21 @@
                             </div>
 
                             <div class="flex flex-col">
-                                <label for="department" class="text-sm font-medium mb-1">Department</label>
-                                <input type="text" id="department" name="department"
-                                    class="block w-full px-4 py-2 bg-gray-100 text-black border border-gray-300 rounded-md shadow-md"
-                                    placeholder="Enter Department">
+                                <label for="department_select" class="text-sm font-medium mb-1">Department</label>
+                                <select id="department_select" name="department"
+                                    class="block w-full px-4 py-2 bg-gray-100 text-black border border-gray-300 rounded-md shadow-md">
+                                    <option value="" disabled selected>Select Department</option>
+                                </select>
                             </div>
 
                             <div class="flex flex-col">
-                                <label for="position" class="text-sm font-medium mb-1">Position</label>
-                                <input type="text" id="position" name="position"
-                                    class="block w-full px-4 py-2 bg-gray-100 text-black border border-gray-300 rounded-md shadow-md"
-                                    placeholder="Enter Position">
+                                <label for="job_title_select" class="text-sm font-medium mb-1">Job Title</label>
+                                <select id="job_title_select" name="job_title"
+                                    class="block w-full px-4 py-2 bg-gray-100 text-black border border-gray-300 rounded-md shadow-md">
+                                    <option value="" disabled selected>Select Job Title</option>
+                                </select>
                             </div>
+
 
                             <div class="flex flex-col">
                                 <label for="position" class="text-sm font-medium mb-1">Password</label>
