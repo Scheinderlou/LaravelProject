@@ -16,8 +16,8 @@ class functionController extends Controller
         ]);
 
         hr_jobs_model::create([
-            'job_title' => $request->job_title,
-            'base_salary' => $request->base_salary,
+            'job_title' => $request->input('job_title'),
+            'base_salary' => $request->input('base_salary'),
         ]);
 
         return redirect()->route('job_page')->with('success', 'Job added successfully!');

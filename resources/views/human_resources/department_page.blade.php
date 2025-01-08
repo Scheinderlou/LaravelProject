@@ -5,7 +5,7 @@
 @section('content')
     <div class="container mx-auto p-6">
         <div class="flex gap-2 mb-4">
-            <button class="px-6 py-2 text-white bg-[#001F3F] rounded-md hover:bg-blue-600 transition""
+            <button class="px-6 py-2 text-white bg-[#001F3F] rounded-md hover:bg-blue-600 transition"
                 data-modal-toggle="add-department-modal">Add Department</button>
         </div>
         <div class="overflow-x-auto my-6 shadow-lg bg-[#008080] rounded-lg">

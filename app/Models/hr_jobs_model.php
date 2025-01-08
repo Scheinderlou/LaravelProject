@@ -11,4 +11,5 @@ class hr_jobs_model extends Model
 
     protected $table = 'hr_jobs';
     protected $fillable = ['job_title', 'base_salary'];
+    public $timestamps = false;
 }

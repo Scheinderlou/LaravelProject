@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('job_title');
             $table->decimal('base_salary');
 
+            $table->timestamps();
         });
     }
 
