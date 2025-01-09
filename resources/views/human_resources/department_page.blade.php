@@ -8,32 +8,35 @@
     @endpush
     <div class="container mx-auto p-6">
         <div class="flex gap-2 mb-4">
-            <button class="px-6 py-2 text-white bg-[#001F3F] rounded-md hover:bg-blue-600 transition"
-                data-modal-toggle="add-department-modal">Add Department</button>
+            <button data-modal-toggle="add-department-modal"
+                class="flex py-2 px-4 rounded-[16px] font-bold text-black hover:text-white transition duration-300">
+                <img src="{{ asset('img/company.svg') }}" alt="Edit Icon" class="w-8 h-8 fill-current mr-2" />
+                <span class="text-lg">Create Department Listing</span>
+            </button>
         </div>
-        <div class="overflow-x-auto my-6 shadow-lg bg-[#333333] rounded-lg">
+        <div class="overflow-x-auto my-6 shadow-lg bg-gray-100 rounded-lg">
             <table class="min-w-full text-left border-collapse border-gray-200">
                 <thead>
                     <tr>
-                        <th class="px-6 py-3 text-lg font-medium text-gray-50 text-center">Department ID</th>
-                        <th class="px-6 py-3 text-lg font-medium text-gray-50 text-center">Department Name</th>
-                        <th class="px-6 py-3 text-lg font-medium text-gray-50 text-center">Actions</th>
+                        <th class="px-6 py-3 text-lg font-medium text-gray-800 text-center">Department ID</th>
+                        <th class="px-6 py-3 text-lg font-medium text-gray-800 text-center">Department Name</th>
+                        <th class="px-6 py-3 text-lg font-medium text-gray-800 text-center">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($departments as $department)
-                        <tr class="text-gray-50">
+                        <tr class="text-gray-800">
                             <td class="px-6 py-3 text-center text-md">{{ $department->department_id }}</td>
                             <td class="px-6 py-3 text-center text-md">{{ $department->department_name }}</td>
-                            <td class="px-6 py-3 text-center">
-                                <button
-                                    class="inline-block px-2 py-1 text-xs font-bold text-white bg-red-600 rounded hover:bg-red-700">
-                                    Delete
+                            <td class="flex justify-center p-4 text-gray-800 ">
+                                <button class="px-2 py-1 text-sm font-bold rounded flex items-center">
+                                    <img src="{{ asset('img/delete.svg') }}" alt="Edit Icon"
+                                        class="w-6 h-6 mr-2 fill-current" />
                                 </button>
                                 <button data-modal-toggle="edit-department-modal"
-                                    class="inline-block px-2 py-1 text-xs font-bold text-white bg-yellow-500 rounded hover:bg-yellow-600"
-                                    onclick="populateEditModal({{ $department->department_id }}, '{{ $department->department_name }}')">
-                                    Edit
+                                    class="px-2 py-1 text-sm font-bold rounded flex items-center">
+                                    <img src="{{ asset('img/edit.svg') }}" alt="Edit Icon"
+                                        class="w-6 h-6 mr-2 fill-current" />
                                 </button>
                             </td>
                         </tr>
@@ -43,7 +46,7 @@
             <!--Add Department Modal-->
             <div id="add-department-modal" tabindex="-1" aria-hidden="true"
                 class="hidden fixed inset-0 flex justify-center items-center z-50 backdrop-blur-sm">
-                <div class="relative p-6 w-full max-w-2xl dark:bg-gray-700 text-white rounded-lg shadow-lg">
+                <div class="relative p-6 w-full max-w-2xl bg-[#555555]  text-white rounded-lg shadow-lg">
                     <div class="flex items-center justify-between pb-4 border-b border-white">
                         <h2 class="text-xl font-semibold">Add Department</h2>
                         <button type="button"
@@ -81,7 +84,7 @@
             <!--Edit Department Modal-->
             <div id="edit-department-modal" tabindex="-1" aria-hidden="true"
                 class="hidden fixed inset-0 flex justify-center items-center z-50 backdrop-blur-sm">
-                <div class="relative p-6 w-full max-w-2xl dark:bg-gray-700 text-white rounded-lg shadow-lg">
+                <div class="relative p-6 w-full max-w-2xl bg-[#555555]  text-white rounded-lg shadow-lg">
                     <div class="flex items-center justify-between pb-4 border-b border-white">
                         <h2 class="text-xl font-semibold">Edit Department</h2>
                         <button type="button"
@@ -101,13 +104,13 @@
                         <div class="flex flex-col mb-4">
                             <label for="edit_department_id" class="text-sm font-medium mb-1">Department ID</label>
                             <input type="text" id="edit_department_id" name="department_id"
-                                class="block w-full px-4 py-2 bg-gray-400 text-red-500 border border-gray-300 rounded-md shadow-md"
-                                value="" placeholder="Enter Department ID" disabled>
+                                class="block w-full px-4 py-2 bg-[#CFCFCF] text-red-500 border border-gray-300 rounded-md shadow-md"
+                                value="" disabled>
                         </div>
                         <div class="flex flex-col mb-4">
                             <label for="edit_department_name" class="text-sm font-medium mb-1">Department Name</label>
                             <input type="text" id="edit_department_name" name="department_name"
-                                class="block w-full px-4 py-2 bg-gray-100 text-black border border-gray-300 rounded-md shadow-md"
+                                class="block w-full px-4 py-2 bg-[#F3F4F6] text-black border border-gray-300 rounded-md shadow-md"
                                 value="" placeholder="Enter Department Name">
                         </div>
                         <div class="flex justify-end gap-4 mt-6">

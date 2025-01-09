@@ -5,12 +5,13 @@
 @section('content')
 
     <div class="container mx-auto p-6">
-        <h2 class="text-3xl font-bold text-gray-700 mb-3">HR Payroll</h2>
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">HR Payroll</h2>
         <div class="flex justify-between items-center mb-6">
             <div class="flex gap-2">
-                <button
-                    data-modal-toggle = "add-payroll-modal"class="bg-[#001F3F] text-white px-4 py-2 text-sm rounded-md hover:bg-blue-600 transition">
-                    Create payroll
+                <button data-modal-toggle="add-payroll-modal"
+                    class="flex py-2 px-4 rounded-[16px] font-bold text-black hover:text-white transition duration-300">
+                    <img src="{{ asset('img/payroll.svg') }}" alt="Edit Icon" class="w-8 h-8 fill-current mr-2" />
+                    <span class="text-lg">Create Payroll Listing</span>
                 </button>
             </div>
 
@@ -27,9 +28,9 @@
             </div>
         </div>
 
-        <table class="min-w-full text-left text-lg rounded-[14px] bg-[#333333]">
+        <table class="min-w-full text-left text-md rounded-[14px] bg-gray-100">
             <thead>
-                <tr class = "text-gray-50 text-center">
+                <tr class = "text-gray-800 text-center">
                     <th class="border-none px-4 py-2">Employee ID</th>
                     <th class="border-none px-4 py-2">Payroll ID</th>
                     <th class="border-none px-4 py-2">Deductions</th>
@@ -40,7 +41,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class = "text-gray-50 text-center text-md">
+                <tr class = "text-gray-800 text-center text-md">
                     <td class="border-none px-4 py-2">101</td>
                     <td class="border-none px-4 py-2">1</td>
                     <td class="border-none px-4 py-2">$200</td>
@@ -48,13 +49,13 @@
                     <td class="border-none px-4 py-2">$1,750</td>
                     <td class="border-none px-4 py-2">2025-01-09</td>
 
-                    <td class="flex justify-center gap-2 p-4 text-gray-50 ">
-                        <button class="inline-block px-2 py-1 text-xs font-bold bg-red-600 rounded">
-                            Delete
+                    <td class="flex justify-center p-4 text-gray-800 ">
+                        <button class="px-2 py-1 text-sm font-bold rounded flex items-center">
+                            <img src="{{ asset('img/delete.svg') }}" alt="Edit Icon" class="w-6 h-6 mr-2 fill-current" />
                         </button>
                         <button data-modal-toggle="edit-payroll-modal"
-                            class="inline-block px-2 py-1 text-xs font-bold bg-[#EDA841] rounded">
-                            Edit
+                            class="px-2 py-1 text-sm font-bold rounded flex items-center">
+                            <img src="{{ asset('img/edit.svg') }}" alt="Edit Icon" class="w-6 h-6 mr-2 fill-current" />
                         </button>
                     </td>
                 </tr>
@@ -63,8 +64,8 @@
         <!--Add Payroll-->
         <div id="add-payroll-modal" tabindex="-1" aria-hidden="true"
             class="hidden fixed inset-0 flex justify-center items-center z-50 text-white backdrop-blur-sm">
-            <div class="relative p-4 w-full max-w-2xl max-h-full"> <!-- Increased max-width -->
-                <div class="relative rounded-lg shadow dark:bg-gray-700">
+            <div class="relative p-4 w-full max-w-2xl max-h-full">
+                <div class="relative rounded-lg shadow bg-[#555555] ">
                     <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
                         <div class="w-full">
                             <h2 class="text-xl font-semibold">Payroll Entry</h2>
@@ -108,7 +109,7 @@
         <div id="edit-payroll-modal" tabindex="-1" aria-hidden="true"
             class="hidden fixed inset-0 flex justify-center items-center z-50 text-white backdrop-blur-sm">
             <div class="relative p-4 w-full max-w-2xl max-h-full">
-                <div class="relative rounded-lg shadow dark:bg-gray-700">
+                <div class="relative rounded-lg shadow bg-[#555555] ">
                     <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
                         <div class="w-full">
                             <h2 class="text-xl font-semibold">Editing Payroll for Staff ID <span
@@ -119,8 +120,8 @@
                             data-modal-toggle="edit-payroll-modal">
                             <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                                 viewBox="0 0 14 14">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
                             </svg>
                         </button>
                     </div>
@@ -144,19 +145,19 @@
                                 <div class="flex flex-col">
                                     <label for="deduction" class="text-sm font-medium mb-1">Total Deduction</label>
                                     <input type="number" id="deduction" name="deduction"
-                                        class="block w-full px-4 py-2 bg-gray-400 text-black border border-gray-300 rounded-md shadow-md"
+                                        class="block w-full px-4 py-2 bg-[#F3F4F6] text-black border border-gray-300 rounded-md shadow-md"
                                         value="200">
                                 </div>
 
                                 <div class="flex flex-col">
                                     <label for="netpay" class="text-sm font-medium mb-1">Net Pay</label>
                                     <input type="number" id="netpay" name="netpay" value="1750"
-                                        class="block w-full px-4 py-2 bg-gray-400 text-black border border-gray-300 rounded-md shadow-md">
+                                        class="block w-full px-4 py-2 bg-[#F3F4F6] text-black border border-gray-300 rounded-md shadow-md">
                                 </div>
                                 <div class="flex flex-col">
                                     <label for="bonus" class="text-sm font-medium mb-1">Bonus</label>
                                     <input type="number" id="netpay" name="bonus" value=""
-                                        class="block w-full px-4 py-2 bg-gray-400 text-black border border-gray-300 rounded-md shadow-md">
+                                        class="block w-full px-4 py-2 bg-[#F3F4F6] text-black border border-gray-300 rounded-md shadow-md">
                                 </div>
                             </div>
                         </div>
