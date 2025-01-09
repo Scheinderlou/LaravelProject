@@ -155,14 +155,10 @@
                                     <input type="number" id="netpay" name="netpay" value="1750"
                                         class="block w-full px-4 py-2 bg-gray-400 text-black border border-gray-300 rounded-md shadow-md">
                                 </div>
-
                                 <div class="flex flex-col">
-                                    <label for="status" class="text-sm font-medium mb-1">Status</label>
-                                    <select id="status" name="status"
+                                    <label for="bonus" class="text-sm font-medium mb-1">Bonus</label>
+                                    <input type="number" id="netpay" name="bonus" value=""
                                         class="block w-full px-4 py-2 bg-gray-400 text-black border border-gray-300 rounded-md shadow-md">
-                                        <option value="Paid" selected>Paid</option>
-                                        <option value="Unpaid">Unpaid</option>
-                                    </select>
                                 </div>
                             </div>
                         </div>
