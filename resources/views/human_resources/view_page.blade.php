@@ -42,30 +42,31 @@
             </thead>
             <tbody>
                 @foreach ($payrolls as $payroll)
-                <tr class = "text-black text-center text-md">
-                    <td class="border-none px-4 py-2">{{$payroll->employee_name}}</td>
-                    <td class="border-none px-4 py-2">{{$payroll->payroll_id}}</td>
-                    <td class="border-none px-4 py-2">{{$payroll->deductions}}</td>
-                    <td class="border-none px-4 py-2">{{$payroll->bonuses}}</td>
-                    <td class="border-none px-4 py-2">{{$payroll->netpay}}</td>
-                    <td class="border-none px-4 py-2">{{$payroll->payment_date}}</td>
+                    <tr class = "text-black text-center text-md">
+                        <td class="border-none px-4 py-2">{{ $payroll->employee_name }}</td>
+                        <td class="border-none px-4 py-2">{{ $payroll->payroll_id }}</td>
+                        <td class="border-none px-4 py-2">{{ $payroll->deductions }}</td>
+                        <td class="border-none px-4 py-2">{{ $payroll->bonuses }}</td>
+                        <td class="border-none px-4 py-2">{{ $payroll->netpay }}</td>
+                        <td class="border-none px-4 py-2">{{ $payroll->payment_date }}</td>
 
-                    <td class="flex justify-center p-4 text-gray-800 ">
-                        <button class="px-2 py-1 text-sm font-bold rounded flex items-center">
-                            <img src="{{ asset('img/delete.svg') }}" alt="Edit Icon" class="w-6 h-6 mr-2 fill-current" />
-                        </button>
-                        <button data-modal-toggle="edit-payroll-modal"
-                            class="px-2 py-1 text-sm font-bold rounded flex items-center">
-                            <img src="{{ asset('img/edit.svg') }}" alt="Edit Icon" class="w-6 h-6 mr-2 fill-current" />
-                        </button>
-                    </td>
-                </tr>
+                        <td class="flex justify-center p-4 text-gray-800 ">
+                            <button class="px-2 py-1 text-sm font-bold rounded flex items-center">
+                                <img src="{{ asset('img/delete.svg') }}" alt="Edit Icon"
+                                    class="w-6 h-6 mr-2 fill-current" />
+                            </button>
+                            <button data-modal-toggle="edit-payroll-modal"
+                                class="px-2 py-1 text-sm font-bold rounded flex items-center">
+                                <img src="{{ asset('img/edit.svg') }}" alt="Edit Icon" class="w-6 h-6 mr-2 fill-current" />
+                            </button>
+                        </td>
+                    </tr>
                 @endforeach
             </tbody>
         </table>
         <!--Add Payroll-->
         <div id="add-payroll-modal" tabindex="-1" aria-hidden="true"
-            class="hidden fixed inset-0 flex justify-center items-center z-50 text-white backdrop-blur-sm">
+            class="hidden fixed inset-0 flex justify-center items-center z-50 text-gray-800 backdrop-blur-sm">
             <div class="relative p-4 w-full max-w-2xl max-h-full">
                 <div class="relative rounded-lg shadow bg-[#555555] ">
                     <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
@@ -83,27 +84,28 @@
                         </button>
                     </div>
                     <div class="p-6">
-                    <form action="{{ route('store') }}" method="POST">
-                        @csrf
-                        <div class="grid grid-cols-2 gap-4">
-                            <input name="payroll_id" placeholder="Payroll ID" class="p-2 shadow rounded bg-[#D1D5DB]" />
-                            <input name="employee_id"placeholder="Employee ID" class="p-2 rounded bg-[#D1D5DB]" />
-                            <input name="deductions"  placeholder="Deductions" class="p-2 rounded bg-[#D1D5DB]" />
-                            <input name="bonuses" placeholder="Bonuses" class="p-2 rounded bg-[#D1D5DB]" />
-                            <input name="netpay"placeholder="Net Pay" class="p-2 rounded bg-[#D1D5DB]" />
-                            <input name="payment_date"type="date" placeholder="Payment Date" class="p-2 rounded bg-[#D1D5DB]" />
-                        </div>
-                        <div class="flex justify-end gap-4 mt-6">
-                            <button type="submit"
-                                class="px-6 py-2 bg-green-600 hover:bg-green-700 text-white rounded-md shadow-md">
-                                Save
-                            </button>
-                            <button type="button"
-                                class="px-6 py-2 bg-red-600 hover:bg-red-700 text-white rounded-md shadow-md"
-                                data-modal-toggle="add-payroll-modal">
-                                Cancel
-                            </button>
-                        </div>
+                        <form action="{{ route('store') }}" method="POST">
+                            @csrf
+                            <div class="grid grid-cols-2 gap-4">
+                                <input name="payroll_id" placeholder="Payroll ID" class="p-2 shadow rounded bg-[#D1D5DB]" />
+                                <input name="employee_id"placeholder="Employee ID" class="p-2 rounded bg-[#D1D5DB]" />
+                                <input name="deductions" placeholder="Deductions" class="p-2 rounded bg-[#D1D5DB]" />
+                                <input name="bonuses" placeholder="Bonuses" class="p-2 rounded bg-[#D1D5DB]" />
+                                <input name="netpay"placeholder="Net Pay" class="p-2 rounded bg-[#D1D5DB]" />
+                                <input name="payment_date"type="date" placeholder="Payment Date"
+                                    class="p-2 rounded bg-[#D1D5DB]" />
+                            </div>
+                            <div class="flex justify-end gap-4 mt-6">
+                                <button type="submit"
+                                    class="px-6 py-2 bg-green-600 hover:bg-green-700 text-white rounded-md shadow-md">
+                                    Save
+                                </button>
+                                <button type="button"
+                                    class="px-6 py-2 bg-red-600 hover:bg-red-700 text-white rounded-md shadow-md"
+                                    data-modal-toggle="add-payroll-modal">
+                                    Cancel
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>
