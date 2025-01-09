@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('hr_payroll', function (Blueprint $table) {
+        Schema::create('hr_payroll_new', function (Blueprint $table) {
             $table->id('payroll_id');
             $table->unsignedBigInteger('employee_id');
             $table->decimal('deductions');
@@ -20,7 +20,7 @@ return new class extends Migration
             $table->date('payment_date');
             $table->unsignedBigInteger('status');
 
-            $table->foreign('employee_id')->references('employee_id')->on('hr_employees')->onDelete('cascade');
+            $table->foreign('employee_id')->references('employee_id')->on('hr_employees_new')->onDelete('cascade');
 
         });
     }
