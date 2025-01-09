@@ -22,7 +22,7 @@
                 </thead>
                 <tbody>
                     @foreach ($departments as $department)
-                        <tr>
+                        <tr class="text-gray-50">
                             <td class="px-6 py-3 text-center text-sm text-black">{{ $department->department_id }}</td>
                             <td class="px-6 py-3 text-center text-sm text-black">{{ $department->department_name }}</td>
                             <td class="px-6 py-3 text-center">
