@@ -45,7 +45,7 @@
             </thead>
             <tbody>
                 @foreach ($results as $result)
-                    <tr>
+                    <tr class="text-gray-50">
                         <td class="px-6 py-3">{{ $result->employee_id }}</td>
                         <td class="px-6 py-3">{{ $result->name }}</td>
                         <td class="px-6 py-3">{{ $result->job_title }}</td>
