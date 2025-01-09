@@ -42,9 +42,7 @@
             </thead>
             <tbody>
                 @foreach ($payrolls as $payroll)
-                
-                
-                <tr class = "text-gray-50 text-center text-md">
+                <tr class = "text-black text-center text-md">
                     <td class="border-none px-4 py-2">{{$payroll->employee_name}}</td>
                     <td class="border-none px-4 py-2">{{$payroll->payroll_id}}</td>
                     <td class="border-none px-4 py-2">{{$payroll->deductions}}</td>
