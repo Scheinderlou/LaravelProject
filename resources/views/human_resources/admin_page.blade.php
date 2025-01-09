@@ -8,17 +8,36 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-5">
             <div class="bg-[#333333] shadow p-4 rounded-[16px]">
                 <h3 class="text-lg text-gray-50 font-bold">Total Employees</h3>
-                <p class="text-2xl text-gray-50 font-semibold mt-2">52</p>
+            <p class="text-2xl text-gray-50 font-semibold mt-2">
+                <?php
+                // Fetching count directly in the Blade file
+                use Illuminate\Support\Facades\DB;
+
+                $employeeCount = DB::table('hr_employees_new')->count();
+                echo $employeeCount;
+                ?>
+            </p>
             </div>
 
             <div class="bg-[#333333] shadow p-4 rounded-[16px]">
                 <h3 class="text-lg text-gray-50 font-bold">Total Jobs</h3>
-                <p class="text-2xl text-gray-50 font-semibold mt-2">12</p>
+                <p class="text-2xl text-gray-50 font-semibold mt-2">
+                <?php
+
+                $jobsCount = DB::table('hr_jobs')->count();
+                echo $jobsCount;
+                ?>
+                </p>
             </div>
 
             <div class="bg-[#333333] shadow p-4 rounded-[16px]">
                 <h3 class="text-lg text-gray-50 font-bold">Total Department</h3>
-                <p class="text-2xl text-gray-50 font-semibold mt-2">8</p>
+                <p class="text-2xl text-gray-50 font-semibold mt-2">
+                <?php
+                $employeeCount = DB::table('hr_departments')->count();
+                echo $employeeCount;
+                ?>
+                </p>
             </div>
         </div>
         <div class="flex gap-2 mb-4">
@@ -64,6 +83,7 @@
             </tbody>
 
             <!-- Add Employee Modal -->
+             
             <div id="add-employee-modal" tabindex="-1" aria-hidden="true"
                 class="hidden fixed inset-0 flex justify-center items-center z-50 backdrop-blur-sm">
                 <div class="relative p-6 w-full max-w-3xl dark:bg-gray-700 text-white rounded-lg shadow-lg">
@@ -79,7 +99,8 @@
                             </svg>
                         </button>
                     </div>
-                    <form class="pt-4">
+                    <form class="pt-4" method="POST" action="{{ route('display') }}">
+                        @csrf
                         <div class="grid grid-cols-2 gap-6">
                             <div class="flex flex-col">
                                 <label for="employee_id" class="text-sm font-medium mb-1">Employee ID</label>
@@ -87,11 +108,14 @@
                                     class="block w-full px-4 py-2 bg-gray-100 text-black border border-gray-300 rounded-md shadow-md"
                                     placeholder="Enter Employee ID">
                             </div>
+                            
                             <div class="flex flex-col">
                                 <label for="job_id" class="text-sm font-medium mb-1">Job ID</label>
                                 <select id="job_id" name="job_id"
                                     class="block w-full px-4 py-2 bg-gray-100 text-black border border-gray-300 rounded-md shadow-md">
-                                    <option value="" disabled selected>Job ID</option>
+                                    @foreach ($jobs as $job)
+                                    <option value="{{$job->job_id}}">{{$job->job_title}}</option>
+                                    @endforeach
                                 </select>
                             </div>
 
@@ -113,7 +137,9 @@
                                 <label for="department_select" class="text-sm font-medium mb-1">Department</label>
                                 <select id="department_select" name="department"
                                     class="block w-full px-4 py-2 bg-gray-100 text-black border border-gray-300 rounded-md shadow-md">
-                                    <option value="" disabled selected>Select Department</option>
+                                    @foreach ($departments as $department)
+                                    <option value="{{$department->department_id}}">{{$department->department_name}}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="flex flex-col">

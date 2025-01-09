@@ -26,7 +26,7 @@ Route::get('/defects_page', [PagesController::class, 'defects_page'])->name('def
 Route::get('/qa_checks', [PagesController::class, 'qa_checks'])->name('qa_checks');
 Route::get('/tp_page', [PagesController::class, 'tp_page'])->name('tp_page');
 Route::get('/admin', [employeeController::class, 'inJoin'])->name('admin_page')->middleware('auth');
-Route::get('/admin', [RecordController::class, 'showCount'])->name('data.count');
+Route::post('/admin_page', [employeeController::class, 'display'])->name('display');
 
 
 Route::post('/login', [AuthManager::class, 'loginPost'])->name('login.post');
