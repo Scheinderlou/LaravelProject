@@ -3,21 +3,21 @@
 @section('title', 'Department - Page')
 
 @section('content')
-@push('scripts')
-<script src="{{ asset('js/editdepartment.js') }}"></script>  <!-- Linking the external script -->
-@endpush
+    @push('scripts')
+        <script src="{{ asset('js/editdepartment.js') }}"></script> <!-- Linking the external script -->
+    @endpush
     <div class="container mx-auto p-6">
         <div class="flex gap-2 mb-4">
             <button class="px-6 py-2 text-white bg-[#001F3F] rounded-md hover:bg-blue-600 transition"
                 data-modal-toggle="add-department-modal">Add Department</button>
         </div>
-        <div class="overflow-x-auto my-6 shadow-lg bg-[#008080] rounded-lg">
+        <div class="overflow-x-auto my-6 shadow-lg bg-[#333333] rounded-lg">
             <table class="min-w-full text-left border-collapse border-gray-200">
                 <thead>
                     <tr>
-                        <th class="px-6 py-3 text-sm font-medium text-black text-center">Department ID</th>
-                        <th class="px-6 py-3 text-sm font-medium text-black text-center">Department Name</th>
-                        <th class="px-6 py-3 text-sm font-medium text-black text-center">Actions</th>
+                        <th class="px-6 py-3 text-lg font-medium text-gray-50 text-center">Department ID</th>
+                        <th class="px-6 py-3 text-lg font-medium text-gray-50 text-center">Department Name</th>
+                        <th class="px-6 py-3 text-lg font-medium text-gray-50 text-center">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -31,7 +31,8 @@
                                     Delete
                                 </button>
                                 <button data-modal-toggle="edit-department-modal"
-                                    class="inline-block px-2 py-1 text-xs font-bold text-white bg-yellow-500 rounded hover:bg-yellow-600" onclick="populateEditModal({{ $department->department_id }}, '{{ $department->department_name }}')">
+                                    class="inline-block px-2 py-1 text-xs font-bold text-white bg-yellow-500 rounded hover:bg-yellow-600"
+                                    onclick="populateEditModal({{ $department->department_id }}, '{{ $department->department_name }}')">
                                     Edit
                                 </button>
                             </td>
@@ -93,7 +94,8 @@
                             </svg>
                         </button>
                     </div>
-                    <form class="pt-4" action="{{ route('updateDepartmentPost', ['department_id' => 'department_id_placeholder']) }}">
+                    <form class="pt-4"
+                        action="{{ route('updateDepartmentPost', ['department_id' => 'department_id_placeholder']) }}">
                         @csrf
                         @method ('PUT')
                         <div class="flex flex-col mb-4">

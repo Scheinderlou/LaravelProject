@@ -9,23 +9,23 @@
             <button class="px-6 py-2 text-white bg-[#001F3F] rounded-md hover:bg-blue-600 transition""
                 data-modal-toggle="add-job-modal">Add Job</button>
         </div>
-        <div class="overflow-x-auto my-6 bg-[#008080] shadow-lg rounded-[14px]">
+        <div class="overflow-x-auto my-6 bg-[#333333] text-gray-50 shadow-lg rounded-[14px]">
             <table class="min-w-full text-left border-collapse">
                 <thead>
-                    <tr>
-                        <th class="px-6 py-3 text-sm font-medium text-black text-center">Job ID</th>
-                        <th class="px-6 py-3 text-sm font-medium text-black text-center">Job Title</th>
-                        <th class="px-6 py-3 text-sm font-medium text-black text-center">Base Salary</th>
-                        <th class="px-6 py-3 text-sm font-medium text-black text-center">Actions</th>
+                    <tr class = "text-lg font-medium text-center">
+                        <th class="px-6 py-3">Job ID</th>
+                        <th class="px-6 py-3">Job Title</th>
+                        <th class="px-6 py-3">Base Salary</th>
+                        <th class="px-6 py-3">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach ($jobs as $job)
-                        <tr>
-                            <td class="px-6 py-3 text-center text-md text-black">{{ $job->job_id }}</td>
-                            <td class="px-6 py-3 text-center text-md text-black">{{ $job->job_title }}</td>
-                            <td class="px-6 py-3 text-center text-md text-black">{{ $job->base_salary }}</td>
-                            <td class="px-6 py-3 text-center">
+                        <tr class="text-center text-md">
+                            <td class="px-6 py-3">{{ $job->job_id }}</td>
+                            <td class="px-6 py-3">{{ $job->job_title }}</td>
+                            <td class="px-6 py-3">{{ $job->base_salary }}</td>
+                            <td class="px-6 py-3">
                                 <button
                                     class="inline-block px-2 py-1 text-xs font-bold text-white bg-red-600 rounded hover:bg-red-700">
                                     Delete

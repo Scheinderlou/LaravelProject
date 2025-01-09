@@ -3,30 +3,22 @@
 @section('title', 'Admin - Page')
 
 @section('content')
-    <!-- Dashboard Content -->
 
     <div class="container mx-auto p-6">
-
-        <!-- Cards Section -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-5">
-            <div class="bg-[#008080] shadow p-4 rounded-[16px]">
-                <h3 class="text-lg font-bold">Total Employees</h3>
-                <p class="text-2xl font-semibold mt-2">152</p>
+            <div class="bg-[#333333] shadow p-4 rounded-[16px]">
+                <h3 class="text-lg text-gray-50 font-bold">Total Employees</h3>
+                <p class="text-2xl text-gray-50 font-semibold mt-2">52</p>
             </div>
 
-            <div class="bg-[#008080] shadow p-4 rounded-[16px]">
-                <h3 class="text-lg font-bold">On Leave</h3>
-                <p class="text-2xl font-semibold mt-2">12</p>
+            <div class="bg-[#333333] shadow p-4 rounded-[16px]">
+                <h3 class="text-lg text-gray-50 font-bold">Total Jobs</h3>
+                <p class="text-2xl text-gray-50 font-semibold mt-2">12</p>
             </div>
 
-            <div class="bg-[#008080] shadow p-4 rounded-[16px]">
-                <h3 class="text-lg font-bold">Pending Requests</h3>
-                <p class="text-2xl font-semibold mt-2">8</p>
-            </div>
-
-            <div class="bg-[#008080] shadow p-4 rounded-[16px]">
-                <h3 class="text-lg font-bold">New Hires</h3>
-                <p class="text-2xl font-semibold mt-2">3</p>
+            <div class="bg-[#333333] shadow p-4 rounded-[16px]">
+                <h3 class="text-lg text-gray-50 font-bold">Total Department</h3>
+                <p class="text-2xl text-gray-50 font-semibold mt-2">8</p>
             </div>
         </div>
         <div class="flex gap-2 mb-4">
@@ -41,33 +33,33 @@
             </a>
         </div>
 
-        <table class="min-w-full text-left text-md rounded-[14px] bg-[#008080]">
+        <table class="min-w-full text-left text-md rounded-[14px] bg-[#333333]">
             <thead>
                 <tr>
-                    <th class="px-6 py-3 font-medium">Staff</th>
-                    <th class="px-6 py-3 font-medium">Name</th>
-                    <th class="px-6 py-3 font-medium">Position</th>
-                    <th class="px-6 py-3 font-medium">Department</th>
-                    <th class="px-6 py-3 font-medium">Actions</th>
+                    <th class="px-6 py-3 text-gray-50 font-medium">Staff</th>
+                    <th class="px-6 py-3 text-gray-50 font-medium">Name</th>
+                    <th class="px-6 py-3 text-gray-50 font-medium">Position</th>
+                    <th class="px-6 py-3 text-gray-50 font-medium">Department</th>
+                    <th class="px-6 py-3 text-gray-50 font-medium">Actions</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($results as $result)
-                <tr>
-                    <td class="px-6 py-3">{{ $result->employee_id }}</td>
-                    <td class="px-6 py-3">{{ $result->name }}</td>
-                    <td class="px-6 py-3">{{ $result->job_title }}</td>
-                    <td class="px-6 py-3">{{ $result->department_name }}</td>
-                    <td class="p-4">
-                        <button class="inline-block px-2 py-1 text-xs font-bold text-green-200 bg-red-500 rounded">
-                            Delete
-                        </button>
-                        <button data-modal-toggle="edit-employee-modal"
-                            class="inline-block px-2 py-1 text-xs font-bold text-green-200 bg-[#EDA841] rounded">
-                            Edit
-                        </button>
-                    </td>
-                </tr>
+                    <tr>
+                        <td class="px-6 py-3">{{ $result->employee_id }}</td>
+                        <td class="px-6 py-3">{{ $result->name }}</td>
+                        <td class="px-6 py-3">{{ $result->job_title }}</td>
+                        <td class="px-6 py-3">{{ $result->department_name }}</td>
+                        <td class="p-4">
+                            <button class="inline-block px-2 py-1 text-xs font-bold text-green-200 bg-red-500 rounded">
+                                Delete
+                            </button>
+                            <button data-modal-toggle="edit-employee-modal"
+                                class="inline-block px-2 py-1 text-xs font-bold text-green-200 bg-[#EDA841] rounded">
+                                Edit
+                            </button>
+                        </td>
+                    </tr>
                 @endforeach()
             </tbody>
 
@@ -210,7 +202,7 @@
                                 <input type="text" id="edit_position" name="position"
                                     class="block w-full px-4 py-2 bg-gray-100 text-black border border-gray-300 rounded-md shadow-md"
                                     value="Software Developer" placeholder="Enter Position">
-                            </div>  
+                            </div>
                         </div>
 
                         <div class="flex justify-end gap-4 mt-6">
