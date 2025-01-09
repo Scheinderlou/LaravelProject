@@ -23,8 +23,8 @@
                 <tbody>
                     @foreach ($departments as $department)
                         <tr class="text-gray-50">
-                            <td class="px-6 py-3 text-center text-sm text-black">{{ $department->department_id }}</td>
-                            <td class="px-6 py-3 text-center text-sm text-black">{{ $department->department_name }}</td>
+                            <td class="px-6 py-3 text-center text-md">{{ $department->department_id }}</td>
+                            <td class="px-6 py-3 text-center text-md">{{ $department->department_name }}</td>
                             <td class="px-6 py-3 text-center">
                                 <button
                                     class="inline-block px-2 py-1 text-xs font-bold text-white bg-red-600 rounded hover:bg-red-700">
