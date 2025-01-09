@@ -41,13 +41,16 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class = "text-gray-800 text-center text-md">
-                    <td class="border-none px-4 py-2">101</td>
-                    <td class="border-none px-4 py-2">1</td>
-                    <td class="border-none px-4 py-2">$200</td>
-                    <td class="border-none px-4 py-2">$500</td>
-                    <td class="border-none px-4 py-2">$1,750</td>
-                    <td class="border-none px-4 py-2">2025-01-09</td>
+                @foreach ($payrolls as $payroll)
+                
+                
+                <tr class = "text-gray-50 text-center text-md">
+                    <td class="border-none px-4 py-2">{{$payroll->employee_name}}</td>
+                    <td class="border-none px-4 py-2">{{$payroll->payroll_id}}</td>
+                    <td class="border-none px-4 py-2">{{$payroll->deductions}}</td>
+                    <td class="border-none px-4 py-2">{{$payroll->bonuses}}</td>
+                    <td class="border-none px-4 py-2">{{$payroll->netpay}}</td>
+                    <td class="border-none px-4 py-2">{{$payroll->payment_date}}</td>
 
                     <td class="flex justify-center p-4 text-gray-800 ">
                         <button class="px-2 py-1 text-sm font-bold rounded flex items-center">
@@ -59,6 +62,7 @@
                         </button>
                     </td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
         <!--Add Payroll-->
@@ -81,13 +85,15 @@
                         </button>
                     </div>
                     <div class="p-6">
+                    <form action="{{ route('store') }}" method="POST">
+                        @csrf
                         <div class="grid grid-cols-2 gap-4">
-                            <input placeholder="Payroll ID" class="p-2 shadow rounded bg-[#D1D5DB]" />
-                            <input placeholder="Employee ID" class="p-2 rounded bg-[#D1D5DB]" />
-                            <input placeholder="Deductions" class="p-2 rounded bg-[#D1D5DB]" />
-                            <input placeholder="Bonuses" class="p-2 rounded bg-[#D1D5DB]" />
-                            <input placeholder="Net Pay" class="p-2 rounded bg-[#D1D5DB]" />
-                            <input placeholder="Payment Date" class="p-2 rounded bg-[#D1D5DB]" />
+                            <input name="payroll_id" placeholder="Payroll ID" class="p-2 shadow rounded bg-[#D1D5DB]" />
+                            <input name="employee_id"placeholder="Employee ID" class="p-2 rounded bg-[#D1D5DB]" />
+                            <input name="deductions"  placeholder="Deductions" class="p-2 rounded bg-[#D1D5DB]" />
+                            <input name="bonuses" placeholder="Bonuses" class="p-2 rounded bg-[#D1D5DB]" />
+                            <input name="netpay"placeholder="Net Pay" class="p-2 rounded bg-[#D1D5DB]" />
+                            <input name="payment_date"type="date" placeholder="Payment Date" class="p-2 rounded bg-[#D1D5DB]" />
                         </div>
                         <div class="flex justify-end gap-4 mt-6">
                             <button type="submit"
@@ -100,6 +106,7 @@
                                 Cancel
                             </button>
                         </div>
+                        </form>
                     </div>
                 </div>
             </div>
