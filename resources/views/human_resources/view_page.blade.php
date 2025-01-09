@@ -30,9 +30,8 @@
         <table class="min-w-full text-left text-lg rounded-[14px] bg-[#333333]">
             <thead>
                 <tr class = "text-gray-50 text-center">
-                    <th class="border-none px-4 py-2">Name</th>
                     <th class="border-none px-4 py-2">Payroll ID</th>
-                    <th class="border-none px-4 py-2">Employee ID</th>
+                    <th class="border-none px-4 py-2">Name</th>
                     <th class="border-none px-4 py-2">Deductions</th>
                     <th class="border-none px-4 py-2">Bonuses</th>
                     <th class="border-none px-4 py-2">Net Pay</th>
@@ -42,9 +41,8 @@
             </thead>
             <tbody>
                 <tr class = "text-gray-50 text-center text-md">
-                    <td class="border-none px-4 py-2">Jezekiel Javier</td>
                     <td class="border-none px-4 py-2">1</td>
-                    <td class="border-none px-4 py-2">101</td>
+                    <td class="border-none px-4 py-2">Jezekiel Javier</td>
                     <td class="border-none px-4 py-2">$200</td>
                     <td class="border-none px-4 py-2">$500</td>
                     <td class="border-none px-4 py-2">$1,750</td>
